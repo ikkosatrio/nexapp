@@ -57,7 +57,7 @@ Dashboard - Administrasi
 										</div>
 									</div>
 
-									<div class="form-group">
+									<div 	class="form-group">
 										<label class="control-label col-lg-2">Input with placeholder</label>
 										<div class="col-lg-10">
 											<input type="text" class="form-control" placeholder="Enter your username...">

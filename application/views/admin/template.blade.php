@@ -13,6 +13,7 @@
 	<link href="{{base_url()}}assets/css/core.css" rel="stylesheet" type="text/css">
 	<link href="{{base_url()}}assets/css/components.css" rel="stylesheet" type="text/css">
 	<link href="{{base_url()}}assets/css/colors.css" rel="stylesheet" type="text/css">
+	<link href="{{base_url()}}assets/js/sweetalert.min.css" rel="stylesheet" type="text/css">
 	<!-- /global stylesheets -->
 	@yield('style')
 	<!-- Core JS files -->
@@ -322,7 +323,7 @@
 									</ul>
 								</li>
 								<li><a href="{{base_url('superuser/mapel')}}"><i class="icon-pencil3"></i> <span>Mata Pelajaran</span></a></li>
-								<li><a href="{{base_url('superuser/mapel')}}"><i class="icon-pencil3"></i> <span>Jenjang</span></a></li>
+								<li><a href="{{base_url('superuser/jenjang')}}"><i class="icon-pencil3"></i> <span>Jenjang</span></a></li>
 								<!-- /forms -->
 							</ul>
 						</div>
@@ -344,6 +345,30 @@
 
 	</div>
 	<!-- /page container -->
-
+	@yield('script')
+	<script type="text/javascript" src="{{base_url()}}assets/js/cak-js.js"></script>
+	<script type="text/javascript" src="{{base_url()}}assets/js/sweetalert.min.js"></script>
+	<script type="text/javascript">
+		function deleteIt(that){
+		swal({   
+			title: "Apa Anda Yakin ?",   
+			text: "Anda Akan Menghapus Data Ini",   
+			type: "warning",   
+			showCancelButton: true,   
+			confirmButtonColor: "#DD6B55",   
+			confirmButtonText: "Ya, Hapus Data!",   
+			closeOnConfirm: false 
+		}, function(){   
+			swal({   
+					title: "Deleted",   
+					text: "Data Anda Telah Di Hapus",   
+					type: "success"
+			},function(){
+				redirect($(that).attr('data-url'));
+			}); 
+			
+		});	
+	}
+	</script>
 </body>
 </html>
