@@ -61,8 +61,8 @@ Dashboard - Administrasi
 												</a>
 
 												<ul class="dropdown-menu dropdown-menu-right">
-													<li><a href="{{base_url('superuser/jenjang/update/'.$result->id)}}"><i class="icon-pencil7"></i> Edit</a></li>
-													<li><a href="javascript:void(0)" onclick="deleteIt(this)" data-url="{{base_url('superuser/jenjang/deleted/'.$result->id)}}"><i class="icon-trash"></i> Hapus</a></li>
+													<li><a href="{{base_url('superuser/jenjang/update/'.$result->id_jenjang)}}"><i class="icon-pencil7"></i> Edit</a></li>
+													<li><a href="javascript:void(0)" onclick="deleteIt(this)" data-url="{{base_url('superuser/jenjang/deleted/'.$result->id_jenjang)}}"><i class="icon-trash"></i> Hapus</a></li>
 												</ul>
 											</li>
 										</ul>

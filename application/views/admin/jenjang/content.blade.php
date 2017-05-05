@@ -39,7 +39,7 @@ Dashboard - Administrasi
 		                	</div>
 						</div>
 						<div class="panel-body">
-							<form class="form-horizontal" id="form_jenjang" action="{{ ($type=='create') ? base_url('superuser/jenjang/created') : base_url('superuser/jenjang/updated/'.$jenjang->id) }}" method="post">
+							<form class="form-horizontal" id="form_jenjang" action="{{ ($type=='create') ? base_url('superuser/jenjang/created') : base_url('superuser/jenjang/updated/'.$jenjang->id_jenjang) }}" method="post">
 								<fieldset class="content-group">
 									{{-- <legend class="text-bold">Basic inputs</legend> --}}
 
@@ -112,6 +112,6 @@ Dashboard - Administrasi
 			
 		})
 	</script>
-	<script type="text/javascript" src="{{base_url()}}assets/js/cak-js.js"></script>
+	
 @endsection
 @endsection

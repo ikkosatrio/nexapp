@@ -32,8 +32,8 @@
 	<script type="text/javascript" src="{{base_url()}}assets/js/plugins/ui/moment/moment.min.js"></script>
 	<script type="text/javascript" src="{{base_url()}}assets/js/plugins/pickers/daterangepicker.js"></script>
 
-	<script type="text/javascript" src="{{base_url()}}assets/js/core/app.js"></script>
 	@yield('corejs')
+	<script type="text/javascript" src="{{base_url()}}assets/js/core/app.js"></script>
 	<!-- /theme JS files -->
 
 </head>
@@ -292,8 +292,8 @@
 
 								<!-- Main -->
 								<li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
-								<li class="active"><a href="{{base_url('superuser')}}"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
-								<li>
+								<li class="{{match($menu,'dashboard','active')}}"><a href="{{base_url('superuser')}}"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
+								<li class="{{match($menu,'member','active')}}">
 									<a href="#"><i class="icon-stack2"></i> <span>Member</span></a>
 									<ul>
 										<li><a href="layout_navbar_fixed.html">Fixed navbar</a></li>
@@ -305,7 +305,7 @@
 
 								<!-- Forms -->
 								<li class="navigation-header"><span>Manajemen Mata Pelajaran</span> <i class="icon-menu" title="Manajemen Mata Pelajaran"></i></li>
-								<li>
+								<li class="{{match($menu,'soal','active')}}">
 									<a href="#"><i class="icon-pencil3"></i> <span>Soal</span></a>
 									<ul>
 										<li><a href="form_inputs_basic.html">Soal</a></li>
@@ -322,8 +322,8 @@
 										</li>
 									</ul>
 								</li>
-								<li><a href="{{base_url('superuser/mapel')}}"><i class="icon-pencil3"></i> <span>Mata Pelajaran</span></a></li>
-								<li><a href="{{base_url('superuser/jenjang')}}"><i class="icon-pencil3"></i> <span>Jenjang</span></a></li>
+								<li class="{{match($menu,'mapel','active')}}"><a href="{{base_url('superuser/mapel')}}"><i class="icon-pencil3"></i> <span>Mata Pelajaran</span></a></li>
+								<li class="{{match($menu,'jenjang','active')}}"><a href="{{base_url('superuser/jenjang')}}"><i class="icon-pencil3"></i> <span>Jenjang</span></a></li>
 								<!-- /forms -->
 							</ul>
 						</div>
