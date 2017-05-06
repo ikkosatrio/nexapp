@@ -15,7 +15,11 @@ class Superuser extends CI_Controller {
 		$this->load->model('m_jenjang');
 		$this->load->model('m_mapel');
 		$this->load->model('m_bab');
+		$this->load->model('m_config');
+
 		$this->load->library('session');
+
+		$this->data['config'] 			= $this->m_config->ambil('config',1)->row();
 	}
 
 	public function index()
@@ -214,4 +218,148 @@ class Superuser extends CI_Controller {
 		}
 	}
 	//Start Bab 
+	
+	// Start Config
+	public function config ($type=null){
+
+		$data 							= $this->data;
+		$data['menu']					= "config";
+
+		if ($this->input->is_ajax_request()) {
+
+			switch ($type) {
+
+				case 'update':					
+
+					$logoname 		= $data['config']->logo;
+					$iconname 		= $data['config']->icon;
+
+					if (!empty($_FILES['logo']['name'])) {
+						$upload 	= $this->upload('./assets/images/website/config/logo/','logo');
+
+						if($upload['auth']	== false){
+							echo goResult(false,$upload['msg']);
+							return;
+						}
+
+						$logoname 	= $upload['msg']['file_name'];
+						if(!empty($logoname)){remFile(base_url().'assets/images/website/config/logo/'.$data['config']->logo);}
+					}
+
+					if (!empty($_FILES['icon']['name'])) {
+						$upload 	= $this->upload('./assets/images/website/config/icon/','icon');
+						if($upload['auth']	== false){
+							echo goResult(false,$upload['msg']);
+							return;
+						}
+
+						$iconname 	= $upload['msg']['file_name'];
+						if(!empty($iconname)){remFile(base_url().'assets/images/website/config/icon/'.$data['config']->icon);}
+					}
+					
+					$id             = 1;
+					$name           = $this->input->post('name');
+					$email          = $this->input->post('email');
+					$phone          = $this->input->post('phone');
+					$address        = $this->input->post('address');
+					$description    = $this->input->post('description');
+					$meta_deskripsi = $this->input->post('meta_deskripsi');
+					$meta_keyword   = $this->input->post('meta_keyword');
+					
+					$data = array(
+						'name'           => $name,
+						'email'          => $email,
+						'phone'          => $phone,
+						'address'        => $address,
+						'description'    => $description,
+						'icon'           => $iconname,
+						'logo'           => $logoname,
+						'meta_deskripsi' => $meta_deskripsi,
+						'meta_keyword'   => $meta_keyword
+					);
+				 
+					$where = array(
+						'id' => $id
+					);
+
+					if($this->m_config->update_data($where,$data,'config')){
+						echo goResult(true,"Data Telah Di Perbarui");
+						return;
+					}
+
+					break;
+				
+				default:
+					echo goResult(false,"Konfigurasi Telah Di Simpan");
+					return;
+					break;
+			}
+		   return;
+		}
+
+		echo $this->blade->nggambar('admin.config.index',$data);
+		return;
+	}
+	// End Config
+	 
+	
+
+
+	//fungsi global
+	private function upload($dir,$name ='userfile'){
+		$config['upload_path']      = $dir;
+        $config['allowed_types']    = 'gif|jpg|png';
+        $config['max_size']         = 2000;
+        $config['encrypt_name'] 	= FALSE;
+
+        $this->load->library('upload', $config);
+
+        if ( ! $this->upload->do_upload($name))
+        {		
+        		$data['auth'] 	= false;
+                $data['msg'] 	= $this->upload->display_errors();
+                return $data;
+        }
+        else
+        {
+        		$data['auth']	= true;
+        		$data['msg']	= $this->upload->data();
+        		return $data;
+        }
+	}
+
+	private function upload_files($path,$files){
+        $config = array(
+            'upload_path'   => $path,
+            'allowed_types' => 'jpg|gif|png',
+            'max_size'		=> '2000',
+            'overwrite'     => false,
+            'encrypt_name'  => FALSE                  
+        );
+
+        $this->load->library('upload', $config);
+
+        $images 		= array();
+        $data['msg']	= array();
+        $data['auth']	= false;
+        foreach ($files['name'] as $key => $image) {
+            $_FILES['images[]']['name']= $files['name'][$key];
+            $_FILES['images[]']['type']= $files['type'][$key];
+            $_FILES['images[]']['tmp_name']= $files['tmp_name'][$key];
+            $_FILES['images[]']['error']= $files['error'][$key];
+            $_FILES['images[]']['size']= $files['size'][$key];
+
+            $this->upload->initialize($config);
+
+            if ($this->upload->do_upload('images[]')) {
+            	$data['auth']		= true;
+            	array_push($data['msg'],$this->upload->data());
+            } else {
+            	$data['auth']		= ($data['auth']==true) ? true : false;
+            	array_push($data['msg'],$this->upload->display_errors());
+            }
+        }
+
+        return $data;
+    } 
 }

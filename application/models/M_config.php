@@ -15,6 +15,11 @@ class M_config extends CI_Model {
 		return $this->db->get_where($table,$where);
 	}
 
+	function update_data($where,$data,$table){
+		$this->db->where($where);
+		$this->db->update($table,$data);
+	}
+
 }
 
 /* End of file M_config.php */

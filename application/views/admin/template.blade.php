@@ -137,7 +137,7 @@
 
 			<ul class="nav navbar-nav navbar-right">
 
-				<li class="dropdown">
+				{{-- <li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						<i class="icon-bubbles4"></i>
 						<span class="visible-xs-inline-block position-right">Messages</span>
@@ -226,7 +226,7 @@
 							<a href="#" data-popup="tooltip" title="All messages"><i class="icon-menu display-block"></i></a>
 						</div>
 					</div>
-				</li>
+				</li> --}}
 
 				<li class="dropdown dropdown-user">
 					<a class="dropdown-toggle" data-toggle="dropdown">
@@ -293,7 +293,7 @@
 								<!-- Main -->
 								<li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
 								<li class="{{match($menu,'dashboard','active')}}"><a href="{{base_url('superuser')}}"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
-								<li class="{{match($menu,'config','active')}}"><a href="{{base_url('superuser/config')}}"><i class="icon-home4"></i> <span>Configurasi Website</span></a></li>
+								<li class="{{match($menu,'config','active')}}"><a href="{{base_url('superuser/config')}}"><i class="icon-gear"></i> <span>Configurasi Website</span></a></li>
 								<li class="{{match($menu,'member','active')}}">
 									<a href="#"><i class="icon-stack2"></i> <span>Member</span></a>
 									<ul>
