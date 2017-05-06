@@ -231,7 +231,7 @@
 				<li class="dropdown dropdown-user">
 					<a class="dropdown-toggle" data-toggle="dropdown">
 						<img src="{{base_url()}}assets/images/placeholder.jpg" alt="">
-						<span>Admin</span>
+						<span>{{ucwords($ctrl->session->userdata('nama'))}}</span>
 						<i class="caret"></i>
 					</a>
 
@@ -241,7 +241,7 @@
 						<li><a href="#"><span class="badge bg-teal-400 pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
 						<li class="divider"></li> --}}
 						<li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
-						<li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+						<li><a href="{{base_url()}}auth/keluar"><i class="icon-switch2"></i> Logout</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -266,7 +266,7 @@
 							<div class="media">
 								<a href="#" class="media-left"><img src="{{base_url()}}assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></a>
 								<div class="media-body">
-									<span class="media-heading text-semibold">Admin Baker</span>
+									<span class="media-heading text-semibold">{{ucwords($ctrl->session->userdata('nama'))}}</span>
 									{{-- <div class="text-size-mini text-muted">
 										<i class="icon-pin text-size-small"></i> &nbsp;Santa Ana, CA
 									</div> --}}
@@ -293,6 +293,7 @@
 								<!-- Main -->
 								<li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
 								<li class="{{match($menu,'dashboard','active')}}"><a href="{{base_url('superuser')}}"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
+								<li class="{{match($menu,'config','active')}}"><a href="{{base_url('superuser/config')}}"><i class="icon-home4"></i> <span>Configurasi Website</span></a></li>
 								<li class="{{match($menu,'member','active')}}">
 									<a href="#"><i class="icon-stack2"></i> <span>Member</span></a>
 									<ul>
@@ -306,16 +307,15 @@
 								<!-- Forms -->
 								<li class="navigation-header"><span>Manajemen Mata Pelajaran</span> <i class="icon-menu" title="Manajemen Mata Pelajaran"></i></li>
 								<li class="{{match($menu,'soal','active')}}">
-									<a href="#"><i class="icon-pencil3"></i> <span>Soal</span></a>
+									<a href="#"><i class="icon-pencil3"></i> <span>Soal & Materi</span></a>
 									<ul>
-										<li><a href="{{base_url('superuser/bab')}}">Bab</a></li>
-										<li>
-											<a href="#">Soal</a>
+										<li class="{{match($menu,'bab','active')}}"><a href="{{base_url('superuser/bab')}}">Bab</a></li>
+										<li class="{{match($menu,'materi','active')}}"><a href="{{base_url('superuser/materi')}}">Materi</a></li>
+										<li class="{{match($menu,'simulasi','active')}}">
+											<a href="#">Simulasi</a>
 											<ul>
-												<li><a href="form_select2.html">Select2 selects</a></li>
-												<li><a href="form_multiselect.html">Bootstrap multiselect</a></li>
-												<li><a href="form_select_box_it.html">SelectBoxIt selects</a></li>
-												<li><a href="form_bootstrap_select.html">Bootstrap selects</a></li>
+												<li><a href="#">TryOut</a></li>
+												<li><a href="#">Prediksi</a></li>
 											</ul>
 										</li>
 									</ul>

@@ -6,10 +6,16 @@ class Superuser extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+
+		if(!$this->session->userdata('auth')){
+			redirect('auth');
+		}
+
 		$this->blade->sebarno('ctrl', $this);
 		$this->load->model('m_jenjang');
 		$this->load->model('m_mapel');
 		$this->load->model('m_bab');
+		$this->load->library('session');
 	}
 
 	public function index()
