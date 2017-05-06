@@ -308,11 +308,9 @@
 								<li class="{{match($menu,'soal','active')}}">
 									<a href="#"><i class="icon-pencil3"></i> <span>Soal</span></a>
 									<ul>
-										<li><a href="form_inputs_basic.html">Soal</a></li>
-										<li><a href="form_checkboxes_radios.html">Paket</a></li>
-										<li><a href="form_checkboxes_radios.html">Bab</a></li>
+										<li><a href="{{base_url('superuser/bab')}}">Bab</a></li>
 										<li>
-											<a href="#">Selects</a>
+											<a href="#">Soal</a>
 											<ul>
 												<li><a href="form_select2.html">Select2 selects</a></li>
 												<li><a href="form_multiselect.html">Bootstrap multiselect</a></li>

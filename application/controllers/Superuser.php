@@ -9,19 +9,20 @@ class Superuser extends CI_Controller {
 		$this->blade->sebarno('ctrl', $this);
 		$this->load->model('m_jenjang');
 		$this->load->model('m_mapel');
+		$this->load->model('m_bab');
 	}
 
 	public function index()
 	{
-		$data['menu']				= "dashboard";
+		$data['menu'] = "dashboard";
 		echo $this->blade->nggambar('admin/home',$data);
 	}
 
 	// Start Mapel
 	public function mapel($url=null,$id=null){
 		
-		$data['menu']				= "mapel";
-		$data['mapel'] = $this->m_mapel->tampil_data('mapel')->result();
+		$data['menu']    = "mapel";
+		$data['mapel']   = $this->m_mapel->tampil_data('mapel')->result();
 		$data['jenjang'] = $this->m_jenjang->tampil_data('jenjang')->result();
 
 		if($url=="create"){
@@ -85,8 +86,9 @@ class Superuser extends CI_Controller {
 	//Start Jenjang 
 	public function jenjang($url=null,$id=null){
 		
-		$data['menu']				= "jenjang";
+		$data['menu']    = "jenjang";
 		$data['jenjang'] = $this->m_jenjang->tampil_data('jenjang')->result();
+
 		if($url=="create"){
 			$data['type']			= "create";
 			echo $this->blade->nggambar('admin.jenjang.content',$data);	
@@ -141,4 +143,69 @@ class Superuser extends CI_Controller {
 		}
 	}
 	// End Mapel
+	
+	//Start Bab
+	public function bab($url=null,$id=null){
+		
+		$data['menu']  = "bab";
+		$data['bab']   = $this->m_bab->tampil_data('bab')->result();
+		$data['mapel'] = $this->m_mapel->tampil_data('mapel')->result();
+
+		if($url=="create"){
+			$data['type']			= "create";
+			echo $this->blade->nggambar('admin.bab.content',$data);	
+			return;
+		}
+		else if ($url == "created" && $this->input->is_ajax_request() == true){
+			$nm_bab   = $this->input->post('nm_bab');
+			$nm_mapel = $this->input->post('mapel');
+			$data = array(
+				'nm_bab' => $nm_bab,
+				'id_mapel'   => $nm_mapel
+			);
+
+			if($this->m_bab->input_data($data,'bab')){
+				echo goResult(true,"Data Telah Di Tambahkan");
+				return;
+			}
+		}
+		else if ($url=="update" && $id!=null){
+			$data['type']			= "update";
+			
+			$where = array('id_bab' => $id);
+			
+			$data['bab'] = $this->m_bab->detail($where,'bab')->row();
+			echo $this->blade->nggambar('admin.bab.content',$data);	
+			
+		}
+		else if ($url=="updated" && $id!=null && $this->input->is_ajax_request() == true){
+			$nm_bab   = $this->input->post('nm_bab');
+			$nm_mapel = $this->input->post('mapel');
+			
+			$data = array(
+				'nm_bab' => $nm_bab,
+				'id_mapel'   => $nm_mapel
+			);
+		 
+			$where = array(
+				'id_bab' => $id
+			);
+		 
+			if($this->m_bab->update_data($where,$data,'bab')){
+				echo goResult(true,"Data Telah Di Perbarui");
+				return;
+			}
+		}
+		else if ($url=="deleted" && $id != null){
+			$where = array('id_mapel' => $id);
+			if ($this->m_mapel->hapus_data($where,'mapel')) {
+			}
+			redirect('superuser/mapel');	
+		}
+		else {		
+			echo $this->blade->nggambar('admin.bab.index',$data);	
+			return;
+		}
+	}
+	//Start Bab 
 }
