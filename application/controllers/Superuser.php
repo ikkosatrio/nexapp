@@ -28,7 +28,7 @@ class Superuser extends CI_Controller {
 	{	
 		$data 		= $this->data;
 		$data['menu'] = "dashboard";
-		echo $this->blade->nggambar('admin/home',$data);
+		echo $this->blade->nggambar('admin.home',$data);
 	}
 
 	// Start Mapel

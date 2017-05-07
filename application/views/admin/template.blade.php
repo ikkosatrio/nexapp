@@ -133,7 +133,7 @@
 				</li> --}}
 			</ul>
 
-			<p class="navbar-text"><span class="label bg-success">Online</span></p>
+			<p class="navbar-text"><a href="{{base_url()}}"><span class="label bg-success">Online</span></a></p>
 
 			<ul class="nav navbar-nav navbar-right">
 
