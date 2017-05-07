@@ -43,7 +43,7 @@
 	<!-- Main navbar -->
 	<div class="navbar navbar-inverse">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="index.html"><img src="{{base_url()}}assets/images/logo_light.png" alt=""></a>
+			<a class="navbar-brand" href="{{base_url('superuser')}}"><img src="{{base_url()}}assets/images/website/config/logo/{{$config->logo}}" alt=""></a>
 
 			<ul class="nav navbar-nav visible-xs-block">
 				<li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
@@ -309,8 +309,8 @@
 								<li class="{{match($menu,'soal','active')}}">
 									<a href="#"><i class="icon-pencil3"></i> <span>Soal & Materi</span></a>
 									<ul>
-										<li class="{{match($menu,'bab','active')}}"><a href="{{base_url('superuser/bab')}}">Bab</a></li>
-										<li class="{{match($menu,'materi','active')}}"><a href="{{base_url('superuser/materi')}}">Materi</a></li>
+										<li class="{{match($menu,'bab','active')}}"><a href="{{base_url('superuser/bab')}}">Bab & Materi</a></li>
+										<li class="{{match($menu,'soal','active')}}"><a href="{{base_url('superuser/soal')}}">Soal</a></li>
 										<li class="{{match($menu,'simulasi','active')}}">
 											<a href="#">Simulasi</a>
 											<ul>

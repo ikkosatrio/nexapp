@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class M_bab extends CI_Model {
+class M_soal extends CI_Model {
 
 	public function __construct()
 	{
@@ -9,20 +9,26 @@ class M_bab extends CI_Model {
 
 	function tampil_data($table){
 		$this->db->from($table);
+		$this->db->join('bab','bab.id_bab=soal.id_bab');
 		$this->db->join('mapel','mapel.id_mapel=bab.id_mapel');
 		$this->db->join('jenjang','jenjang.id_jenjang=mapel.id_jenjang');
 		return $query = $this->db->get();
 		// return $this->db->get($table);
 	}
 
+	function tampil_data_per_bab($where,$table){
+
+		$this->db->join('bab','bab.id_bab=soal.id_bab');
+		$this->db->join('mapel','mapel.id_mapel=bab.id_mapel');
+		$this->db->join('jenjang','jenjang.id_jenjang=mapel.id_jenjang');
+		return $this->db->get_where($table,$where);
+	}
+
 	function input_data($data,$table){
 		$this->db->insert($table,$data);
-		return $this->db->insert_id();
 	}
 	
-	function detail($where,$table){
-		$this->db->join('mapel','mapel.id_mapel=bab.id_mapel');
-		$this->db->join('jenjang','jenjang.id_jenjang=mapel.id_jenjang');		
+	function detail($where,$table){		
 		return $this->db->get_where($table,$where);
 	}
 
@@ -38,5 +44,5 @@ class M_bab extends CI_Model {
 
 }
 
-/* End of file M_bab.php */
-/* Location: ./application/models/M_bab.php */
+/* End of file M_mapel.php */
+/* Location: ./application/models/M_mapel.php */
