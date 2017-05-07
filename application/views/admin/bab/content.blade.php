@@ -19,8 +19,8 @@ Dashboard - Administrasi
 					<div class="breadcrumb-line">
 						<ul class="breadcrumb">
 							<li><a href="{{base_url('superuser')}}"><i class="icon-home2 position-left"></i> Home</a></li>
-							<li><a href="{{base_url('superuser/mapel')}}">Mapel</a></li>
-							<li class="active">{{ ($type=="create") ? 'Tambah Data Mapel' : 'Perbarui Data Mapel' }}</li>
+							<li><a href="{{base_url('superuser/bab')}}">Bab</a></li>
+							<li class="active">{{ ($type=="create") ? 'Tambah Data Bab' : 'Perbarui Data Bab' }}</li>
 						</ul>
 					</div>
 				</div>
@@ -31,7 +31,7 @@ Dashboard - Administrasi
 					<!-- Form horizontal -->
 					<div class="panel panel-flat">
 						<div class="panel-heading">
-							<h5 class="panel-title">Tambah data Mapel</h5>
+							<h5 class="panel-title">Tambah data Bab</h5>
 							<div class="heading-elements">
 								<ul class="icons-list">
 			                		<li><a data-action="collapse"></a></li>
@@ -41,28 +41,28 @@ Dashboard - Administrasi
 		                	</div>
 						</div>
 						<div class="panel-body">
-							<form class="form-horizontal" id="form_mapel" action="{{ ($type=='create') ? base_url('superuser/mapel/created') : base_url('superuser/mapel/updated/'.$mapel->id_mapel) }}" method="post">
+							<form class="form-horizontal" id="form_bab" action="{{ ($type=='create') ? base_url('superuser/bab/created') : base_url('superuser/bab/updated/'.$bab->id_bab) }}" method="post">
 								<fieldset class="content-group">
 									{{-- <legend class="text-bold">Basic inputs</legend> --}}
 
 									<div class="form-group">
-										<label class="control-label col-lg-2">Nama Mata Pelajaran</label>
+										<label class="control-label col-lg-2">Nama Bab</label>
 										<div class="col-lg-10">
-											<input type="text" class="form-control" name="nm_mapel" value="{{ ($type=='create') ? '' : $mapel->nm_mapel }}" required>
+											<input type="text" class="form-control" name="nm_bab" value="{{ ($type=='create') ? '' : $bab->nm_bab }}" required>
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="control-label col-lg-2">Jenjang</label>
+										<label class="control-label col-lg-2">Mata Pelajaran/Jenjang</label>
 										<div class="col-lg-10">
-										<select required class="select-search" name="jenjang">
+										<select required class="select-search" name="mapel">
 											<optgroup label="Pilih Jenjang">
 												<option value="">Pilih</option>
-												@foreach ($jenjang as $result)
+												@foreach ($mapel as $result)
 													<option 
 														@if ($type=='update')
-														{{ ($mapel->id_jenjang==$result->id_jenjang) ? "selected" : "" }} 
+														{{ ($bab->id_mapel==$result->id_mapel) ? "selected" : "" }} 
 														@endif
-														value="{{$result->id_jenjang}}">{{$result->nm_jenjang}}
+														value="{{$result->id_mapel}}">{{$result->nm_mapel}} - {{$result->nm_jenjang}}
 													</option>
 												@endforeach
 											</optgroup>
@@ -89,36 +89,36 @@ Dashboard - Administrasi
 			</div>
 @section('script')
 	<script type="text/javascript">
-	$("#form_mapel").submit(function(e){
+	$("#form_bab").submit(function(e){
 			e.preventDefault();
-			var formData = new FormData( $("#form_mapel")[0] );
+			var formData = new FormData( $("#form_bab")[0] );
 
 			$.ajax({
-				url: 		$("#form_mapel").attr('action'),
+				url: 		$("#form_bab").attr('action'),
 				type: 	"POST",
 				data:  		new FormData(this),
           		processData: false,
           		contentType: false,
 				beforeSend: function(){
-					blockMessage($('#form_mapel'),'Please Wait , {{ ($type =="create") ? "Menambahkan Mapel" : "Memperbarui Mapel" }}','#fff');		
+					blockMessage($('#form_bab'),'Please Wait , {{ ($type =="create") ? "Menambahkan Bab" : "Memperbarui Bab" }}','#fff');		
 				}
 			})
 			.done(function(data){
-				$('#form_mapel').unblock();
+				$('#form_bab').unblock();
 				sweetAlert({
-					title: 	((data.auth==false) ? "Opps!" : '{{ ($type =="create") ? "Mapel Di Buatkan" : "Mapel Di Perbarui" }}'),
+					title: 	((data.auth==false) ? "Opps!" : '{{ ($type =="create") ? "Bab Di Buatkan" : "Bab Di Perbarui" }}'),
 					text: 	data.msg,
 					type: 	((data.auth==false) ? "error" : "success"),
 				},
 				function(){
 					if(data.auth!=false){
-						redirect("{{base_url('superuser/mapel')}}");		
+						redirect("{{base_url('superuser/bab')}}");		
 						return;
 					}
 				});
 			})
 			.fail(function() {
-			    $('#form_mapel').unblock();
+			    $('#form_bab').unblock();
 				sweetAlert({
 					title: 	"Opss!",
 					text: 	"Ada Yang Salah! , Silahkan Coba Lagi Nanti",

@@ -13,6 +13,7 @@
 	<link href="{{base_url()}}assets/css/core.css" rel="stylesheet" type="text/css">
 	<link href="{{base_url()}}assets/css/components.css" rel="stylesheet" type="text/css">
 	<link href="{{base_url()}}assets/css/colors.css" rel="stylesheet" type="text/css">
+	<link href="{{base_url()}}assets/js/sweetalert.min.css" rel="stylesheet" type="text/css">
 	<!-- /global stylesheets -->
 	@yield('style')
 	<!-- Core JS files -->
@@ -31,8 +32,8 @@
 	<script type="text/javascript" src="{{base_url()}}assets/js/plugins/ui/moment/moment.min.js"></script>
 	<script type="text/javascript" src="{{base_url()}}assets/js/plugins/pickers/daterangepicker.js"></script>
 
-	<script type="text/javascript" src="{{base_url()}}assets/js/core/app.js"></script>
 	@yield('corejs')
+	<script type="text/javascript" src="{{base_url()}}assets/js/core/app.js"></script>
 	<!-- /theme JS files -->
 
 </head>
@@ -136,7 +137,7 @@
 
 			<ul class="nav navbar-nav navbar-right">
 
-				<li class="dropdown">
+				{{-- <li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						<i class="icon-bubbles4"></i>
 						<span class="visible-xs-inline-block position-right">Messages</span>
@@ -225,12 +226,12 @@
 							<a href="#" data-popup="tooltip" title="All messages"><i class="icon-menu display-block"></i></a>
 						</div>
 					</div>
-				</li>
+				</li> --}}
 
 				<li class="dropdown dropdown-user">
 					<a class="dropdown-toggle" data-toggle="dropdown">
 						<img src="{{base_url()}}assets/images/placeholder.jpg" alt="">
-						<span>Admin</span>
+						<span>{{ucwords($ctrl->session->userdata('nama'))}}</span>
 						<i class="caret"></i>
 					</a>
 
@@ -240,7 +241,7 @@
 						<li><a href="#"><span class="badge bg-teal-400 pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
 						<li class="divider"></li> --}}
 						<li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
-						<li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+						<li><a href="{{base_url()}}auth/keluar"><i class="icon-switch2"></i> Logout</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -265,7 +266,7 @@
 							<div class="media">
 								<a href="#" class="media-left"><img src="{{base_url()}}assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></a>
 								<div class="media-body">
-									<span class="media-heading text-semibold">Admin Baker</span>
+									<span class="media-heading text-semibold">{{ucwords($ctrl->session->userdata('nama'))}}</span>
 									{{-- <div class="text-size-mini text-muted">
 										<i class="icon-pin text-size-small"></i> &nbsp;Santa Ana, CA
 									</div> --}}
@@ -291,8 +292,9 @@
 
 								<!-- Main -->
 								<li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
-								<li class="active"><a href="{{base_url('superuser')}}"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
-								<li>
+								<li class="{{match($menu,'dashboard','active')}}"><a href="{{base_url('superuser')}}"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
+								<li class="{{match($menu,'config','active')}}"><a href="{{base_url('superuser/config')}}"><i class="icon-gear"></i> <span>Configurasi Website</span></a></li>
+								<li class="{{match($menu,'member','active')}}">
 									<a href="#"><i class="icon-stack2"></i> <span>Member</span></a>
 									<ul>
 										<li><a href="layout_navbar_fixed.html">Fixed navbar</a></li>
@@ -304,25 +306,22 @@
 
 								<!-- Forms -->
 								<li class="navigation-header"><span>Manajemen Mata Pelajaran</span> <i class="icon-menu" title="Manajemen Mata Pelajaran"></i></li>
-								<li>
-									<a href="#"><i class="icon-pencil3"></i> <span>Soal</span></a>
+								<li class="{{match($menu,'soal','active')}}">
+									<a href="#"><i class="icon-pencil3"></i> <span>Soal & Materi</span></a>
 									<ul>
-										<li><a href="form_inputs_basic.html">Soal</a></li>
-										<li><a href="form_checkboxes_radios.html">Paket</a></li>
-										<li><a href="form_checkboxes_radios.html">Bab</a></li>
-										<li>
-											<a href="#">Selects</a>
+										<li class="{{match($menu,'bab','active')}}"><a href="{{base_url('superuser/bab')}}">Bab</a></li>
+										<li class="{{match($menu,'materi','active')}}"><a href="{{base_url('superuser/materi')}}">Materi</a></li>
+										<li class="{{match($menu,'simulasi','active')}}">
+											<a href="#">Simulasi</a>
 											<ul>
-												<li><a href="form_select2.html">Select2 selects</a></li>
-												<li><a href="form_multiselect.html">Bootstrap multiselect</a></li>
-												<li><a href="form_select_box_it.html">SelectBoxIt selects</a></li>
-												<li><a href="form_bootstrap_select.html">Bootstrap selects</a></li>
+												<li><a href="#">TryOut</a></li>
+												<li><a href="#">Prediksi</a></li>
 											</ul>
 										</li>
 									</ul>
 								</li>
-								<li><a href="{{base_url('superuser/mapel')}}"><i class="icon-pencil3"></i> <span>Mata Pelajaran</span></a></li>
-								<li><a href="{{base_url('superuser/mapel')}}"><i class="icon-pencil3"></i> <span>Jenjang</span></a></li>
+								<li class="{{match($menu,'mapel','active')}}"><a href="{{base_url('superuser/mapel')}}"><i class="icon-pencil3"></i> <span>Mata Pelajaran</span></a></li>
+								<li class="{{match($menu,'jenjang','active')}}"><a href="{{base_url('superuser/jenjang')}}"><i class="icon-pencil3"></i> <span>Jenjang</span></a></li>
 								<!-- /forms -->
 							</ul>
 						</div>
@@ -344,6 +343,30 @@
 
 	</div>
 	<!-- /page container -->
-
+	@yield('script')
+	<script type="text/javascript" src="{{base_url()}}assets/js/cak-js.js"></script>
+	<script type="text/javascript" src="{{base_url()}}assets/js/sweetalert.min.js"></script>
+	<script type="text/javascript">
+		function deleteIt(that){
+		swal({   
+			title: "Apa Anda Yakin ?",   
+			text: "Anda Akan Menghapus Data Ini",   
+			type: "warning",   
+			showCancelButton: true,   
+			confirmButtonColor: "#DD6B55",   
+			confirmButtonText: "Ya, Hapus Data!",   
+			closeOnConfirm: false 
+		}, function(){   
+			swal({   
+					title: "Deleted",   
+					text: "Data Anda Telah Di Hapus",   
+					type: "success"
+			},function(){
+				redirect($(that).attr('data-url'));
+			}); 
+			
+		});	
+	}
+	</script>
 </body>
 </html>
