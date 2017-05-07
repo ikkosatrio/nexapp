@@ -4,11 +4,11 @@ NEXAPP
 @endsection
 @section('content')
 <div class="main ">
-	<a href="{{base_url()}}home/smp" class="info">
+	<a href="{{base_url()}}home/smp/materi" class="info">
 		<div class="view second-effect">
 			<img src="{{base_url()}}assets/images/signature.png" />
 	        <div class="mask">
-				<button class="btn btn-info" style="margin-top: -30px;margin-left:-10px;"><i class="glyphicon glyphicon-eye-open"> MATERI</i></button>
+				<button name="materi" class="btn btn-info" style="margin-top: -30px;margin-left:-10px;"><i class="glyphicon glyphicon-eye-open"> MATERI</i></button>
 			</div>
 		</div>
 	</a>
@@ -26,7 +26,7 @@ NEXAPP
 		<div class="view second-effect">
 			<img src="{{base_url()}}assets/images/ice_break.jpg" />
 			<div class="mask">
-				<button class="btn btn-info" style="margin-top: -30px;margin-left:-10px;"><i class="glyphicon glyphicon-eye-open"> ICE BREAK</i></button>
+				<button class="btn btn-info" style="margin-top: -30px;margin-left:-30px;"><i class="glyphicon glyphicon-eye-open"> ICE BREAK</i></button>
 			</div>
 		</div>
 	</a>
@@ -35,7 +35,7 @@ NEXAPP
 		<div class="view second-effect">
 			<img src="{{base_url()}}assets/images/Exam-Plus.png" />
 			<div class="mask">
-				<button class="btn btn-info" style="margin-top: -30px;margin-left:-10px;"><i class="glyphicon glyphicon-eye-open"> EXAM SIMULATION</i></button>
+				<button class="btn btn-info" style="margin-top: -30px;margin-left:-60px;"><i class="glyphicon glyphicon-eye-open"> EXAM SIMULATION</i></button>
 			</div>
 		</div>
 	</a>

@@ -6,7 +6,11 @@
   <title>@yield('title')</title>
   <link rel="stylesheet" href="{{base_url()}}assets/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="{{base_url()}}assets/css/style.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="{{base_url()}}assets/css/icons/icomoon/styles.css" media="screen">
   <link rel="stylesheet" type="text/css" href="{{base_url()}}assets/css/common.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="{{base_url()}}assets/css/core.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="{{base_url()}}assets/css/components.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="{{base_url()}}assets/css/colors.css" media="screen">
   @yield('style')
   <link rel="stylesheet" type="text/css" href="{{base_url()}}assets/css/secondeffect.css" media="screen">
   <style type="text/css">
@@ -46,4 +50,6 @@
 <script src="{{base_url()}}assets/js/core/libraries/jquery.min.js"></script>
 @yield('corejs')
 <script src="{{base_url()}}assets/js/core/libraries/bootstrap.min.js"></script>
+<script src="{{base_url()}}assets/js/core/app.js"></script>
+
 </html>
