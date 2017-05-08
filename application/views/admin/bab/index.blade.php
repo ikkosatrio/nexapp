@@ -63,8 +63,10 @@ Dashboard - Administrasi
 												</a>
 												{{-- {{var_dump($result)}} --}}
 												<ul class="dropdown-menu dropdown-menu-right">
-													<li><a href="{{base_url('superuser/bab/update/'.$result->id_bab)}}"><i class="icon-pencil7"></i> Edit</a></li>
-													<li><a href="javascript:void(0)" onclick="deleteIt(this)" data-url="{{base_url('superuser/bab/deleted/'.$result->id_bab)}}"><i class="icon-trash"></i> Hapus</a></li>
+													<li><a href="{{base_url('superuser/soal/create/'.$result->id_bab)}}"><i class=" icon-add"></i> Buat Soal</a></li>
+													<li><a href="{{base_url('superuser/soal/list/'.$result->id_bab)}}"><i class=" icon-file-text"></i> Lihat Soal</a></li>
+													<li><a href="{{base_url('superuser/bab/update/'.$result->id_bab)}}"><i class="icon-pencil7"></i> Edit Bab</a></li>
+													<li><a href="javascript:void(0)" onclick="deleteIt(this)" data-url="{{base_url('superuser/bab/deleted/'.$result->id_bab)}}"><i class="icon-trash"></i> Hapus Bab</a></li>
 												</ul>
 											</li>
 										</ul>
@@ -75,7 +77,6 @@ Dashboard - Administrasi
 						</table>
 					</div>
 					<!-- /basic datatable -->					
-
 				</div>
 				<!-- /content area -->
 

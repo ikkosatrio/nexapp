@@ -16,6 +16,8 @@ class Superuser extends CI_Controller {
 		$this->load->model('m_mapel');
 		$this->load->model('m_bab');
 		$this->load->model('m_config');
+		$this->load->model('m_materi');
+		$this->load->model('m_soal');
 
 		$this->load->library('session');
 
@@ -23,14 +25,16 @@ class Superuser extends CI_Controller {
 	}
 
 	public function index()
-	{
+	{	
+		$data 		= $this->data;
 		$data['menu'] = "dashboard";
-		echo $this->blade->nggambar('admin/home',$data);
+		echo $this->blade->nggambar('admin.home',$data);
 	}
 
 	// Start Mapel
 	public function mapel($url=null,$id=null){
 		
+		$data            = $this->data;
 		$data['menu']    = "mapel";
 		$data['mapel']   = $this->m_mapel->tampil_data('mapel')->result();
 		$data['jenjang'] = $this->m_jenjang->tampil_data('jenjang')->result();
@@ -41,10 +45,10 @@ class Superuser extends CI_Controller {
 			return;
 		}
 		else if ($url == "created" && $this->input->is_ajax_request() == true){
-			$nm_mapel = $this->input->post('nm_mapel');
+			$nm_mapel   = $this->input->post('nm_mapel');
 			$nm_jenjang = $this->input->post('jenjang');
 			$data = array(
-				'nm_mapel' => $nm_mapel,
+				'nm_mapel'   => $nm_mapel,
 				'id_jenjang' => $nm_jenjang
 			);
 
@@ -54,20 +58,20 @@ class Superuser extends CI_Controller {
 			}
 		}
 		else if ($url=="update" && $id!=null){
-			$data['type']			= "update";
+			$data['type']  = "update";
 			
-			$where = array('id_mapel' => $id);
+			$where         = array('id_mapel' => $id);
 			
 			$data['mapel'] = $this->m_mapel->detail($where,'mapel')->row();
 			echo $this->blade->nggambar('admin.mapel.content',$data);	
 			
 		}
 		else if ($url=="updated" && $id!=null && $this->input->is_ajax_request() == true){
-			$nm_mapel = $this->input->post('nm_mapel');
+			$nm_mapel   = $this->input->post('nm_mapel');
 			$nm_jenjang = $this->input->post('jenjang');
 		 
 			$data = array(
-				'nm_mapel' => $nm_mapel,
+				'nm_mapel'   => $nm_mapel,
 				'id_jenjang' => $nm_jenjang
 			);
 		 
@@ -95,7 +99,7 @@ class Superuser extends CI_Controller {
 	
 	//Start Jenjang 
 	public function jenjang($url=null,$id=null){
-		
+		$data            = $this->data;
 		$data['menu']    = "jenjang";
 		$data['jenjang'] = $this->m_jenjang->tampil_data('jenjang')->result();
 
@@ -118,9 +122,9 @@ class Superuser extends CI_Controller {
 		}
 		else if ($url=="update" && $id!=null){
 			
-			$data['type']			= "update";
+			$data['type']    = "update";
 			
-			$where = array('id_jenjang' => $id);
+			$where           = array('id_jenjang' => $id);
 			
 			$data['jenjang'] = $this->m_jenjang->detail($where,'jenjang')->row();
 			echo $this->blade->nggambar('admin.jenjang.content',$data);	
@@ -156,7 +160,7 @@ class Superuser extends CI_Controller {
 	
 	//Start Bab
 	public function bab($url=null,$id=null){
-		
+		$data          = $this->data;
 		$data['menu']  = "bab";
 		$data['bab']   = $this->m_bab->tampil_data('bab')->result();
 		$data['mapel'] = $this->m_mapel->tampil_data('mapel')->result();
@@ -167,14 +171,25 @@ class Superuser extends CI_Controller {
 			return;
 		}
 		else if ($url == "created" && $this->input->is_ajax_request() == true){
-			$nm_bab   = $this->input->post('nm_bab');
-			$nm_mapel = $this->input->post('mapel');
+			$nm_bab     = $this->input->post('nm_bab');
+			$nm_mapel   = $this->input->post('mapel');
+			$materis    = $this->input->post('materi[]');
+			$isiMateris = $this->input->post('isiMateri[]');
+
 			$data = array(
-				'nm_bab' => $nm_bab,
-				'id_mapel'   => $nm_mapel
+				'nm_bab'   => $nm_bab,
+				'id_mapel' => $nm_mapel
 			);
 
-			if($this->m_bab->input_data($data,'bab')){
+			if($id = $this->m_bab->input_data($data,'bab')){
+				foreach ($materis as $key => $result) {
+					$data = array(
+						'judul_materi' => $result,
+						'isi_materi'   => $isiMateris[$key],
+						'id_bab'       => $id
+					);
+					$this->m_materi->input_data($data,'materi');
+				}
 				echo goResult(true,"Data Telah Di Tambahkan");
 				return;
 			}
@@ -193,8 +208,8 @@ class Superuser extends CI_Controller {
 			$nm_mapel = $this->input->post('mapel');
 			
 			$data = array(
-				'nm_bab' => $nm_bab,
-				'id_mapel'   => $nm_mapel
+				'nm_bab'   => $nm_bab,
+				'id_mapel' => $nm_mapel
 			);
 		 
 			$where = array(
@@ -217,13 +232,116 @@ class Superuser extends CI_Controller {
 			return;
 		}
 	}
-	//Start Bab 
+	//Start Bab
+	
+	//Start Soal
+	public function soal($url=null,$id=null,$id_soal=null){
+		$data          = $this->data;
+		$data['menu']  = "bab";
+		$data['bab']   = $this->m_bab->tampil_data('bab')->result();
+		$data['mapel'] = $this->m_mapel->tampil_data('mapel')->result();
+		$data['soal'] = $this->m_soal->tampil_data('soal')->result();
+
+		if($url=="create"){
+			$data['type']			= "create";
+			
+			$where = array('id_bab' => $id);
+			
+			$data['bab'] = $this->m_bab->detail($where,'bab')->row();
+			echo $this->blade->nggambar('admin.soal.content',$data);	
+		}
+		else if ($url == "created" && $this->input->is_ajax_request() == true){
+			$id_bab     = $id;
+			$soal       = $this->input->post('isiSoal');
+			$pembahasan = $this->input->post('pembahasan');
+			$jawaban    = $this->input->post('jawaban');
+			
+			$pilihA     = $this->input->post('pilihA');
+			$pilihB     = $this->input->post('pilihB');
+			$pilihC     = $this->input->post('pilihC');
+			$pilihD     = $this->input->post('pilihD');
+
+
+			$data = array(
+				'isi_soal'   => $soal,
+				'pilihA'     => $pilihA,
+				'pilihB'     => $pilihB,
+				'pilihC'     => $pilihC,
+				'pilihD'     => $pilihD,
+				'jawaban'    => $jawaban,
+				'pembahasan' => $pembahasan,
+				'id_bab'     => $id_bab
+			);
+
+		if($id = $this->m_soal->input_data($data,'soal')){
+				echo goResult(true,"Data Telah Di Tambahkan");
+				return;
+			}
+		}
+		else if ($url=="list") {
+			$where        = array('soal.id_bab' => $id);
+			$where2       = array('id_bab' => $id);
+			$data['bab']  = $this->m_bab->detail($where2,'bab')->row();
+			$data['soal'] = $this->m_soal->tampil_data_per_bab($where,'soal')->result();
+			echo $this->blade->nggambar('admin.soal.index_bab',$data);
+		}
+		else if ($url=="update") {
+			$data['type'] = "update";
+			$where        = array('id_soal' => $id_soal);
+			$where2       = array('id_bab' => $id);
+			$data['bab']  = $this->m_bab->detail($where2,'bab')->row();
+			$data['soal'] = $this->m_soal->tampil_data_per_bab($where,'soal')->row();
+			echo $this->blade->nggambar('admin.soal.content',$data);
+		}
+		else if ($url=="updated" && $id!=null && $this->input->is_ajax_request() == true){
+			// $id_bab     = $id;
+			$soal       = $this->input->post('isiSoal');
+			$pembahasan = $this->input->post('pembahasan');
+			$jawaban    = $this->input->post('jawaban');
+			
+			$pilihA     = $this->input->post('pilihA');
+			$pilihB     = $this->input->post('pilihB');
+			$pilihC     = $this->input->post('pilihC');
+			$pilihD     = $this->input->post('pilihD');
+
+
+			$data = array(
+				'isi_soal'   => $soal,
+				'pilihA'     => $pilihA,
+				'pilihB'     => $pilihB,
+				'pilihC'     => $pilihC,
+				'pilihD'     => $pilihD,
+				'jawaban'    => $jawaban,
+				'pembahasan' => $pembahasan
+			);
+		 
+			$where = array(
+				'id_soal' => $id
+			);
+		 
+			if($this->m_soal->update_data($where,$data,'soal')){
+				echo goResult(true,"Data Telah Di Perbarui");
+				return;
+			}
+		}
+		else if ($url=="deleted") {
+			$where = array('id_soal' => $id_soal);
+			if ($this->m_soal->hapus_data($where,'soal')) {
+			}
+			redirect('superuser/soal/list/'.$id);
+		}
+		else {		
+			echo $this->blade->nggambar('admin.soal.index',$data);	
+			return;
+		}
+	}
+	//End Soal  
 	
 	// Start Config
 	public function config ($type=null){
-
-		$data 							= $this->data;
-		$data['menu']					= "config";
+		$data         = $this->data;
+		$data         = $this->data;
+		$data['menu'] = "config";
 
 		if ($this->input->is_ajax_request()) {
 

@@ -10,6 +10,12 @@ Dashboard - Administrasi
 	<script type="text/javascript" src="{{base_url()}}assets/js/plugins/forms/selects/select2.min.js"></script>
 	<script type="text/javascript" src="{{base_url()}}assets/js/pages/form_inputs.js"></script>
 	<script type="text/javascript" src="{{base_url()}}assets/js/pages/form_select2.js"></script>
+
+	<script type="text/javascript" src="{{base_url()}}assets/js/plugins/editors/wysihtml5/wysihtml5.min.js"></script>
+	<script type="text/javascript" src="{{base_url()}}assets/js/plugins/editors/wysihtml5/toolbar.js"></script>
+	<script type="text/javascript" src="{{base_url()}}assets/js/plugins/editors/wysihtml5/parsers.js"></script>
+	<script type="text/javascript" src="{{base_url()}}assets/js/plugins/editors/wysihtml5/locales/bootstrap-wysihtml5.ua-UA.js"></script>
+	<script type="text/javascript" src="{{base_url()}}assets/js/pages/editor_wysihtml5.js"></script>
 @endsection
 @section('content')
 	<div class="content-wrapper">
@@ -69,6 +75,21 @@ Dashboard - Administrasi
 										</select>
 										</div>
 									</div>
+									{{-- <div class="form-group">
+										<button type="button" class="btn btn-primary col-lg-2" onclick="NewMateri()"> Tambah Materi <i class="icon-pencil3 position-right"></i></button>
+									</div> --}}
+									<div class="form-group">
+										<label class="control-label col-lg-2">Materi</label>
+										<div class="col-lg-10">
+											<input type="text" class="form-control" placeholder="Judul Materi" name="materi[]" value="" required>
+											<textarea rows="5" cols="5" name="isiMateri[]" class=" wysihtml5 wysihtml5-default form-control" placeholder="Isi Materi"></textarea>
+										</div>
+										<div class="text-right">
+							                <button style="margin-top: 10px" type="button" class="btn btn-danger" onclick="removeMateri(this)">Hapus Materi</button>
+										</div>
+									</div>
+									<div id="box-materi">
+									</div>
 								</fieldset>
 								<div class="text-right">
 									<button type="submit" class="btn btn-primary">{{ ($type=='create') ? 'Simpan' : 'Edit' }} <i class="icon-arrow-right14 position-right"></i></button>
@@ -89,6 +110,25 @@ Dashboard - Administrasi
 			</div>
 @section('script')
 	<script type="text/javascript">
+	function NewMateri(){
+		
+		var html         = 		'<div class="form-group">'+
+										'<label class="control-label col-lg-2">Materi</label>'+
+										'<div class="col-lg-10">'+
+											'<input type="text" class="form-control" placeholder="Judul Materi" name="materi[]" value="" required>'+
+											'<textarea rows="5" cols="5" name="description" class=" wysihtml5 wysihtml5-default form-control" placeholder="Isi Materi"></textarea>'+
+										'</div>'+
+										'<div class="text-right">'+
+							                '<button style="margin-top: 10px;margin-bottom: 10px;" type="button" class="btn btn-danger" onclick="removeMateri(this)">Hapus Materi</button>'+
+										'</div>'+
+								'</div>';
+		$("#box-materi").append(html);
+	}
+
+	function removeMateri(that){
+		$(that).parents('.form-group').remove();
+	}
+
 	$("#form_bab").submit(function(e){
 			e.preventDefault();
 			var formData = new FormData( $("#form_bab")[0] );

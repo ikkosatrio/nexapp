@@ -17,9 +17,12 @@ class M_bab extends CI_Model {
 
 	function input_data($data,$table){
 		$this->db->insert($table,$data);
+		return $this->db->insert_id();
 	}
 	
-	function detail($where,$table){		
+	function detail($where,$table){
+		$this->db->join('mapel','mapel.id_mapel=bab.id_mapel');
+		$this->db->join('jenjang','jenjang.id_jenjang=mapel.id_jenjang');		
 		return $this->db->get_where($table,$where);
 	}
 

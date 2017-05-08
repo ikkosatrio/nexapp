@@ -38,7 +38,7 @@
 	<!-- Main navbar -->
 	<div class="navbar navbar-inverse">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="index.html"><img src="{{base_url()}}assets/images/logo_light.png" alt=""></a>
+			<a class="navbar-brand" href="{{base_url('superuser')}}"><img src="{{base_url()}}assets/images/website/config/logo/{{$config->logo}}" alt=""></a>
 
 			<ul class="nav navbar-nav pull-right visible-xs-block">
 				<li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
@@ -48,7 +48,7 @@
 		<div class="navbar-collapse collapse" id="navbar-mobile">
 			<ul class="nav navbar-nav navbar-right">
 				<li>
-					<a href="{{base_url('home')}}">
+					<a href="{{base_url()}}">
 						<i class="icon-display4"></i> <span class="visible-xs-inline-block position-right" title="Menuju Website"> Go to website</span>
 					</a>
 				</li>
@@ -74,7 +74,7 @@
 					<form id="form-login">
 						<div class="panel panel-body login-form">
 							<div class="text-center">
-								<div class="icon-object border-slate-300 text-slate-300"><i class="icon-reading"></i></div>
+								<img class="img-responsive mar-center" style="max-width:100px;height:100px;display:block;margin-left:auto;margin-right:auto;" src="{{base_url()}}assets/images/website/config/icon/{{$config->icon}}">
 								<h5 class="content-group">Login to your account <small class="display-block">{{$config->name}}</small></h5>
 							</div>
 

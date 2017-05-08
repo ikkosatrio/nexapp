@@ -17,6 +17,11 @@ $(function() {
         stylesheets: ["assets/css/components.css"]
     });
 
+    $('.wysihtml5-default2').wysihtml5({
+        parserRules:  wysihtml5ParserRules,
+        stylesheets: ["assets/css/components.css"]
+    });
+
 
     // Simple toolbar
     $('.wysihtml5-min').wysihtml5({
