@@ -23,7 +23,7 @@
 					Menu
 				</h6>
 				<div class="row">
-					<div class="col-lg-2 col-sm-6 col-xs-6">
+					<div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
 						<div class="thumbnail">
 							<div class="thumb">
 								<img src="{{base_url()}}assets/main/images/placeholder.jpg" alt="">
@@ -40,7 +40,7 @@
 						</div>
 					</div>
 
-					<div class="col-lg-2 col-sm-6 col-xs-6">
+					<div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
 						<div class="thumbnail">
 							<div class="thumb">
 								<img src="{{base_url()}}assets/main/images/placeholder.jpg" alt="">
@@ -57,7 +57,7 @@
 						</div>
 					</div>
 
-					<div class="col-lg-2 col-sm-6 col-xs-6">
+					<div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
 						<div class="thumbnail">
 							<div class="thumb">
 								<img src="{{base_url()}}assets/main/images/placeholder.jpg" alt="">
@@ -74,7 +74,7 @@
 						</div>
 					</div>
 
-					<div class="col-lg-2 col-sm-6 col-xs-6">
+					<div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
 						<div class="thumbnail">
 							<div class="thumb">
 								<img src="{{base_url()}}assets/main/images/placeholder.jpg" alt="">
@@ -90,7 +90,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-2 col-sm-6 col-xs-6">
+					<div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
 						<div class="thumbnail">
 							<div class="thumb">
 								<img src="{{base_url()}}assets/main/images/placeholder.jpg" alt="">
@@ -106,7 +106,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-2 col-sm-6 col-xs-6">
+					<div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
 						<div class="thumbnail">
 							<div class="thumb">
 								<img src="{{base_url()}}assets/main/images/placeholder.jpg" alt="">

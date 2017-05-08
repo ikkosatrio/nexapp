@@ -25,6 +25,27 @@ class Main extends CI_Controller {
 		echo $this->blade->nggambar('main.home',$data);
 	}
 
+	public function prediksi($url=null,$id=null)
+	{
+		$data         = $this->data;
+		$data['menu'] = "prediksi";
+		$where = array(
+				'id_mapel' => $url
+			);
+		$data['mapel']   = $this->m_mapel->detail($where,'mapel')->row();
+		
+		if ($url=="start" && $id!=null) {
+			$where = array(
+				'mapel.id_mapel' => $id
+			);
+			$data['soal']   = $this->m_soal->soal_mulai($where,'soal')->result();
+			echo $this->blade->nggambar('main.prediksi.start',$data);	
+		}else{
+
+		echo $this->blade->nggambar('main.prediksi.index',$data);
+		}
+	}
+
 }
 
 /* End of file Main.php */

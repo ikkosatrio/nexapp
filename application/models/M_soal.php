@@ -32,6 +32,13 @@ class M_soal extends CI_Model {
 		return $this->db->get_where($table,$where);
 	}
 
+	function soal_mulai($where,$table){
+		$this->db->join('bab','bab.id_bab=soal.id_bab');
+		$this->db->join('mapel','mapel.id_mapel=bab.id_mapel');
+		$this->db->join('jenjang','jenjang.id_jenjang=mapel.id_jenjang');	
+		return $this->db->get_where($table,$where);
+	}
+
 	function update_data($where,$data,$table){
 		$this->db->where($where);
 		$this->db->update($table,$data);

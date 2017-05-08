@@ -18,7 +18,8 @@ class M_mapel extends CI_Model {
 		$this->db->insert($table,$data);
 	}
 	
-	function detail($where,$table){		
+	function detail($where,$table){	
+		$this->db->join('jenjang','jenjang.id_jenjang=mapel.id_jenjang');	
 		return $this->db->get_where($table,$where);
 	}
 

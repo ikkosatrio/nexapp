@@ -32,7 +32,13 @@
 
 	<script type="text/javascript" src="{{base_url()}}assets/main/js/plugins/ui/ripple.min.js"></script>
 	<!-- /theme JS files -->
-
+	@yield('js')
+	<style type="text/css">
+		.navbar-brand > img {
+		    margin-top: -5px;
+		    height: 30px;
+		}
+	</style>
 </head>
 
 <body>
