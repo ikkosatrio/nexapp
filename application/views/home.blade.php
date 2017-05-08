@@ -1,4 +1,4 @@
-@extends('template')
+<!-- @extends('template')
 @section('title')
 NEXAPP
 @endsection
@@ -42,3 +42,4 @@ NEXAPP
 </div>
                
 @endsection
+ -->
