@@ -60,6 +60,16 @@ class home extends CI_Controller {
             echo $this->blade->nggambar('home');
             return;
         } 
+    } 
+
+    function sma($url=null, $id=null) {
+        $data['halaman'] = "sma";
+
+        if ($url == "materi_sma") {
+            $data['name'] = "materi_sma";
+            echo $this->blade->nggambar('mapel_sma.home', $data);
+            return;
+        }
     }
 
     function esq() {
