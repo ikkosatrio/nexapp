@@ -64,7 +64,7 @@
 				<!-- Sidebars overview -->
 				<div class="panel panel-flat">
 					<div class="panel-heading">
-						<h5 class="panel-title">Soal No 1</h5>
+						<h5 class="panel-title">Soal</h5>
 						<div class="heading-elements">
 							{{-- <ul class="icons-list">
 		                		<li><a data-action="collapse"></a></li>
@@ -74,11 +74,11 @@
 	                	</div>
 					</div>
 					{{-- {{var_dump($soal)}} --}}
-					@foreach ($soal as $result)
+					@foreach ($soal as $key => $result)
 						{{-- expr --}}
 					<div class="panel-body">
 							<div class="row">
-									<label class="control-label col-lg-3">Soal</label>
+									<label class="control-label col-lg-3">Soal No {{$key+1}}</label>
 								<div class="col-lg-12">
 									<div class="well">
 					                    {!!$result->isi_soal!!}
