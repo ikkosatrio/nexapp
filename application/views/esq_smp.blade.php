@@ -1,4 +1,4 @@
-@extends('template')
+@extends('main.template')
 @section('title')
 NEXAPP
 @endsection

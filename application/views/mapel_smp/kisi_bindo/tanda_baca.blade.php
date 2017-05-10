@@ -1,10 +1,10 @@
-@extends('template')
+@extends('main.template')
 @section('title')
 NEXAPP
 @endsection
 @section('content')
 <!-- Bordered panels title -->
-<h1 class="content-group text-semibold">KISI - KISI BAHASA INDONESIA </h1>
+<h1 align="center" class="content-group text-semibold">KISI - KISI BAHASA INDONESIA </h1>
 
 <div class="row">
 	<div class="col-md-1"></div>
