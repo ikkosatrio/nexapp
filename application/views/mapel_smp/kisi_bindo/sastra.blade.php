@@ -17,53 +17,16 @@ NEXAPP
 				<ol>
 					<h4>
 						<li>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</p>
+							<p>Bacalah kutipan cerita berikut!</p>
+							<fieldset>
+								Meskipun Sinta memakai kruk ketika berjalan, ia memiliki kelebihan. la mampu melukis dengan baik. Terlebih-lebih ketika lukisannya mulai dimuat di beberapa majalah dan surat kabar yang menyediakan rubrik untuk anak¬anak: la makin yakin bahwa memang mampu melukis. Benar yang dikatakan Ratih.
+							</fieldset>
+							<p>Kata tercetak miring tersebut mengandung makna ....</p>
 							<ol type="A" style="margin-left: 40px">
-								<h4><li>tes</li></h4>
-								<h4><li>tes</li></h4>
-								<h4><li>tes</li></h4>
-								<h4><li>tes</li></h4>
-							</ol>
-
-							<p>
-								<strong>JAWABAN : B</strong>
-							</p>
-
-							<p>
-								<strong>PEMBAHASAN</strong>
-							</p>
-
-							<P>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</P>
-						</li>
-					</h4>
-
-					<h4>
-						<li>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</p>
-							<ol type="A" style="margin-left: 40px">
-								<h4><li>tes a</li></h4>
-								<h4><li>tes a</li></h4>
-								<h4><li>tes a</li></h4>
-								<h4><li>tes a</li></h4>
+								<h4><li>kolom surat pembaca dalam surat kabar/majalah</li></h4>
+								<h4><li>kolom redaksi dalam surat kabar/majalah</li></h4>
+								<h4><li>kepala karangan dalam surat kabar/majalah</li></h4>
+								<h4><li>halaman pertama dalam surat kabar/majalah</li></h4>
 							</ol>
 
 							<p>
@@ -75,50 +38,45 @@ NEXAPP
 							</p>
 
 							<P>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Menurut KBBI, rubrik adalah kepala karangan (ruangan tetap) dalam surat kabar, majalah, dan sebagainya.
 							</P>
 						</li>
 					</h4>
 
-					<h4>
-						<li>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</p>
-							<ol type="A" style="margin-left: 40px">
-								<h4><li>tes v</li></h4>
-								<h4><li>tes v</li></h4>
-								<h4><li>tes v</li></h4>
-								<h4><li>tes v</li></h4>
-							</ol>
+					<h4><li>
+						<p>Bacalah kutipan cerita,berikut!</p>
+						<fieldset>
+							Sore itu aku duduk seorang diri di tepi pantai memandang dunia yang terdiri atas waktu. Memandang bagaimana ruang dan waktu bersekutu menjelmakan alam itu untuk mataku. Di tepi pantai, di tepi bumi, sernesta adalah sapuan warna keemasan dan lautan adalah cairan logam meski buih pada debur ombak yang menghempas itu tetap saja putih seperti kapas dari langit.
+						</fieldset>
+						<p>Makna kata bersekutu dalam kutipan cerita tersebut adalah ....</p>
+						<ol type="A" style="margin-left: 30px">
+							<h4><li>bergabung</li></h4>
+							<h4><li>berbagi</li></h4>
+							<h4><li>berlainan</li></h4>
+							<h4><li>bermusuhan </li></h4>
+						</ol>
+						<p><strong>JAWABAN : A</strong></p>
+						<p><strong>PEMBAHASAN</strong></p>
+						<p>Menurut KBBI, bersekutu adalah' berekanan (dengan); berkawanan (dengan); menggabung¬kan diri (dengan).</p>
+					</li></h4>
+					
+					<h4><li>
+						<p>Bacalah kutipan cerita berikut!</p>
+						<fieldset>
+							Siang itu angin'berhembus sepoi-sepoi. Moni duduk di dahan sambil mengantuk. Tiba-tiba perutnya berbunyi keroncongan dan terasa lapar. la membayangkan betapa enaknya bila makan buah-buahan. Namun, ia kemudian tersentak mengingat kata-kata temannya. la dikatakan sebagai si Serakah, si Rakus, si Tukang Makan, dan sebagainya.
+						</fieldset>
+						<p>Makna kata keroncongan pada kutipan cerita tersebut adalah ....</p>
+						<ol type="A" style="margin-left: 30px">
+							<h4><li>musik yang ditimbulkan oleh perut </li></h4>
+							<h4><li>berbunyinya perut karena lapar </li></h4>
+							<h4><li>tanda seseorang mulai lapar</li></h4>
+							<h4><li>harmoni yang'dihasilkan dari alat musik</li></h4>
+						</ol>
+						<p><strong>JAWABAN : B</strong></p>
+						<p><strong>PEMBAHASAN</strong></p>
+						<p>Menurut KBBI, keroncongan adalah berbunyinya perut karena lapar. </p>
+					</li></h4>
 
-							<p>
-								<strong>JAWABAN : D</strong>
-							</p>
-
-							<p>
-								<strong>PEMBAHASAN</strong>
-							</p>
-
-							<P>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</P>
-						</li>
-					</h4>
 				</ol>
 			</div>
 		</div>

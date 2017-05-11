@@ -7,8 +7,8 @@ NEXAPP
 <h1 align="center" class="content-group text-semibold">KISI - KISI BAHASA INDONESIA </h1>
 
 <div class="row">
-	<div class="col-md-1"></div>
-	<div class="col-md-10">
+	<div class="col-md-2"></div>
+	<div class="col-md-8">
 		<div class="panel panel-success panel-bordered">
 			<div class="panel-heading">
 				<h3 class="panel-title" align="center">MENULIS TERBATAS</h3>
@@ -17,53 +17,13 @@ NEXAPP
 				<ol>
 					<h4>
 						<li>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							<p>Kulkas memiliki fungsi untuk [...] makanan dengan suhu di bawah suhu ruangan. Tentunya hal tersebut akan membuat makanan kita jauh lebih awet daripada diletakkan di ruang biasa. Kata yang tepat untuk melengkapi teks tersebut adalah .... UN 2015/2016 
 							</p>
 							<ol type="A" style="margin-left: 40px">
-								<h4><li>tes</li></h4>
-								<h4><li>tes</li></h4>
-								<h4><li>tes</li></h4>
-								<h4><li>tes</li></h4>
-							</ol>
-
-							<p>
-								<strong>JAWABAN : B</strong>
-							</p>
-
-							<p>
-								<strong>PEMBAHASAN</strong>
-							</p>
-
-							<P>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</P>
-						</li>
-					</h4>
-
-					<h4>
-						<li>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</p>
-							<ol type="A" style="margin-left: 40px">
-								<h4><li>tes a</li></h4>
-								<h4><li>tes a</li></h4>
-								<h4><li>tes a</li></h4>
-								<h4><li>tes a</li></h4>
+								<h4><li>menaruh</li></h4>
+								<h4><li>membuat</li></h4>
+								<h4><li>menyimpan</li></h4>
+								<h4><li>menyembunyikan </li></h4>
 							</ol>
 
 							<p>
@@ -75,50 +35,40 @@ NEXAPP
 							</p>
 
 							<P>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Kulkas memiliki fungsi untuk menyimpan makanan dengan suhu di bawah suhu ruangan. Tentunya hal tersebut akan membuat makanan kita jauh lebih awet daripada diletakkan di ruang biasa.
 							</P>
 						</li>
 					</h4>
-
-					<h4>
-						<li>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</p>
-							<ol type="A" style="margin-left: 40px">
-								<h4><li>tes v</li></h4>
-								<h4><li>tes v</li></h4>
-								<h4><li>tes v</li></h4>
-								<h4><li>tes v</li></h4>
-							</ol>
-
-							<p>
-								<strong>JAWABAN : D</strong>
-							</p>
-
-							<p>
-								<strong>PEMBAHASAN</strong>
-							</p>
-
-							<P>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</P>
-						</li>
-					</h4>
+					<h4><li>
+						<p>Aku diajak orang tuaku pergi ke pantai. Di pantai, aku berenangbersama-sama, aku makan sambil bersenda gurau. Begitu puas aku langsung pulang. [....]</p>
+						<p>Kalimat yang tepat untuk melengkapi teks tersebut adalah .... UN 2015/2016</p>
+						<ol type="A" style="margin-left: 40px">
+							<h4><li>Aku sangat bahagia dan menikmati liburan. </li></h4>
+							<h4><li>Aku kuran.g puas dan ingin berlibur.</li></h4>
+							<h4><li>Aku senang dan bangga pada diriku. </li></h4>
+							<h4><li>Aku kurang menikmati had liburanku.</li></h4>
+						</ol>
+						<p><strong>JAWABAN : A</strong></p>
+						<p><strong>PEMBAHASAN</strong></p>
+						<p>Kalimat yang tepat untuk melengkapi teks tersebut adalah Aku sangat bahagia dan menikmati liburan.</p>
+					</li></h4>
+					<h4><li>
+						<p>Bacalah paragraf berikut!</p>
+						<fieldset>
+							Dalam tubuh manusia terdapat seperti pada mesin mobil. Tubuh manusia dapat ... energi kimiawi yang terkandung dalam bahan-bahan bakarnya menjadi energi panas dan energi gerak. Nasi yang Anda ... akan dibakar dalam tubuh sebagaimana bensin dibakar dalam silinder mesin mobil. Sebagian dari energi kimiawi yang disediakan oleh nasi itu diubah menjadi energi panas yang membuat tubuh kita tetap hangat.
+						</fieldset>
+						<p>Kata baku yang tepat untuk mengisi bagian rumpang pada paragraf tersebut adalah .... </p>
+						<ol type="A" style="margin-left: 40px">
+							<h4><li>aktivitas, mengkonversi, konsumtif 	</li></h4>
+							<h4><li>aktifitas, mengonversi, konsumsi </li></h4>
+							<h4><li>aktifitas, mengonversi, konsumtif </li></h4>
+							<h4><li>aktivitas, mengonversi, konsumsi </li></h4>
+						</ol>
+						<p><strong>JAWABAN : D</strong></p>
+						<p><strong>PEMBAHASAN</strong></p>
+						<p>Kata baku adalah kata yang penulisannya sesuai dengan kaidah penulisan dan KBBI. Kata baku yang tepat untuk melengkapi teks tersebut adalah aktivitas, mengonversi, konsumsi.</p>
+					</li></h4>
+					
 				</ol>
 			</div>
 		</div>

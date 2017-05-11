@@ -1,12 +1,12 @@
 @extends('main.template')
 @section('content')
 <div class="page-header">
-		<div class="page-header-content">
-			<div class="page-title">
-				<h4><i class="icon-display position-left"></i> <span class="text-semibold">Selamat Datang</span> - di {{$config->name}}</h4>
-			</div>
+	<div class="page-header-content">
+		<div class="page-title">
+			<h4><i class="icon-display position-left"></i> <span class="text-semibold">Selamat Datang</span> - di {{$config->name}}</h4>
 		</div>
 	</div>
+</div>
 	<!-- /page header -->
 
 
@@ -129,7 +129,7 @@
   <div class="modal-dialog">
 
     <!-- Modal content-->
-    <div class="modal-content" style="width: 650px">
+    <div class="modal-content" >
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">PILIH JENJANG PENDIDIKAN</h4>

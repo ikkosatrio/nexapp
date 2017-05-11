@@ -3,7 +3,10 @@
 NEXAPP
 @endsection
 @section('content')
-<div class="row">
+<div class="page-container">
+  <div class="page-content">
+    <div class="content-wrapper">
+      <div class="row">
   <div class="col-sm-12 col-md-4">
     <div class="thumbnail">
       <iframe width="100%" height="300px" src="https://www.youtube.com/embed/UAsEWyNP2Cg" frameborder="0" allowfullscreen></iframe>
@@ -92,4 +95,7 @@ NEXAPP
 
 
 
+    </div>
+  </div>
+</div>
 @endsection

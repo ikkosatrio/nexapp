@@ -7,8 +7,8 @@ NEXAPP
 <h1 align="center" class="content-group text-semibold">KISI - KISI BAHASA INDONESIA </h1>
 
 <div class="row">
-	<div class="col-md-1"></div>
-	<div class="col-md-10">
+	<div class="col-md-2"></div>
+	<div class="col-md-8">
 		<div class="panel panel-success panel-bordered">
 			<div class="panel-heading">
 				<h3 class="panel-title" align="center">MEMBACA NON-SASTRA</h3>
@@ -17,53 +17,16 @@ NEXAPP
 				<ol>
 					<h4>
 						<li>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</p>
+							<p>Perhatikan kalimat berikut!</p>
+							<fieldset>
+								Korban banjir bandang dievakuasi ke tempat yang Iebih tinggi
+							</fieldset>
+							<p>Makna kata "dievakuasi" pada kalimat tersebut adalah…</p>
 							<ol type="A" style="margin-left: 40px">
-								<h4><li>tes</li></h4>
-								<h4><li>tes</li></h4>
-								<h4><li>tes</li></h4>
-								<h4><li>tes</li></h4>
-							</ol>
-
-							<p>
-								<strong>JAWABAN : B</strong>
-							</p>
-
-							<p>
-								<strong>PEMBAHASAN</strong>
-							</p>
-
-							<P>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</P>
-						</li>
-					</h4>
-
-					<h4>
-						<li>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</p>
-							<ol type="A" style="margin-left: 40px">
-								<h4><li>tes a</li></h4>
-								<h4><li>tes a</li></h4>
-								<h4><li>tes a</li></h4>
-								<h4><li>tes a</li></h4>
+								<h4><li>	dibawa ke daerah yang jauh</li></h4>
+								<h4><li>diberin bantuan untuk tetap betah</li></h4>
+								<h4><li>	dipindahkan ke tempat yang aman</li></h4>
+								<h4><li>dipaksa pergi dari tempat berbahaya</li></h4>
 							</ol>
 
 							<p>
@@ -75,50 +38,44 @@ NEXAPP
 							</p>
 
 							<P>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Menurut KB.BI, evakuasi-adalah pemindahan penduduk ke tempat yang Iebih aman.
 							</P>
 						</li>
 					</h4>
 
-					<h4>
-						<li>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</p>
-							<ol type="A" style="margin-left: 40px">
-								<h4><li>tes v</li></h4>
-								<h4><li>tes v</li></h4>
-								<h4><li>tes v</li></h4>
-								<h4><li>tes v</li></h4>
-							</ol>
-
-							<p>
-								<strong>JAWABAN : D</strong>
-							</p>
-
-							<p>
-								<strong>PEMBAHASAN</strong>
-							</p>
-
-							<P>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</P>
-						</li>
-					</h4>
+					<h4><li>
+						<p>Bacalah teks berikut!</p>
+						<fieldset>
+							Mario Teguh Golden Ways "Salam super" itulah kata-kata pembuka yang,
+							biasa diucapkan oleh. Mario Teguh ketika ia mulai membawakan acara di Metro TV yang bertajuk “MarioTeguh Golden Ways”. Terkenal sebagai motivator terbaik di Indonesia yang memiliki kepribadian yang cerdas serta mampu memotivasi banyak orang melalui rangkaian kata-kata bijaknya sehingga ia makin banyak disukai oleh orang-orang.
+						</fieldset>
+						<p>Makna kata bercetak miring pada kutipan teks tersebut adalah ...</p>
+						<ol type="A" style="margin-left: 30px">
+							<h4><li>Orang yang bertugas mengingatkan orang lain agar selalu melakukan perbuatan baik. </li></h4>
+							<h4><li>Orang yang bertugas membantu seseorang dalam menyelesaikan masalah pribadinya</li></h4>
+							<h4><li>Orang yang menyebabkan timbulnya dorongan pada orang lain untuk melakukan sesuatu</li></h4>
+							<h4><li>Orang yang membangkitkan semangat seseorang agar berhasil dalam menjalankan usahanya</li></h4>
+						</ol>
+						<p><strong>JAWABAN : C</strong></p>
+						<p><strong>PEMBAHASAN</strong></p>
+						<p>Menurut KBBI, motivator adalah orang (perangsang) yang menyebabkan timbulnya motivasi pada orang lain untuk melaksanakan sesuatu; pendorong; penggerak. </p>
+					</li></h4>
+					<h4><li>
+						<p>Bacalah teks berikut!</p>
+						<fieldset>
+							Badan Pengelola Dana Perkebunan Sawit menargetkan hibah Rp. 750 miliar untuk petani sawit tahun ini. Bantuan ini antara lain untuk membantu pembiayaan peremajaan tanaman kelapa sawit, sertifikasi lahan. Dana tersebut berasal dari dana sawit.
+						</fieldset>
+						<p>Arti kalimat yang dicetak miring pada teks tersebut adalah ....</p>
+						<ol type="A" style="margin-left: 30px">
+							<h4><li>Dana hibah sebesar Rp750 miliar berasal dari dana sawit.</li></h4>
+							<h4><li>Dana yang dihasilkan dari pengelolaan kelapa sawit berasal dari dana sawit</li></h4>
+							<h4><li>Dana dari Badan Pengelolaan Dana Perkebunan sawit berasal dari dana sawit</li></h4>
+							<h4><li>Dana untuk Badan Pengelolaan sawit berasal dari dana sawit.</li></h4>
+						</ol>
+						<p><strong>JAWABAN : A</strong></p>
+						<p><strong>PEMBAHASAN</strong></p>
+						<p>	Berdasarkan teks tersebut, dapat kita ketahui bahwa Badan Pengelola Dana Perkebunan Sawit menargetkan hibah Rp750 miliar yang dananya berasal dari dana sawit. Kalimat yang dicetak miring pada teks dapat diartikan dana hibah sebesar Rp750 miliar berasal dari dana sawit. </p>
+					</li></h4>
 				</ol>
 			</div>
 		</div>

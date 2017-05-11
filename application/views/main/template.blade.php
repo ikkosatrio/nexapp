@@ -88,7 +88,7 @@
 
 		<div class="navbar-collapse collapse" id="navbar-second-toggle">
 			<ul class="nav navbar-nav navbar-nav-material">
-				<li><a href="#"><i class="icon-home position-left"></i> Home</a></li>
+				<li><a href="{{base_url('main')}}"><i class="icon-home position-left"></i> Home</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						<i class="icon-make-group position-left"></i> Materi <span class="caret"></span>
