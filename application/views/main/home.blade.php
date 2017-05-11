@@ -155,7 +155,10 @@
 											<a href="{{base_url('main/smp/ipa')}}"><button type="submit" class="btn btn-primary legitRipple">IPA <i class="icon-arrow-right14 position-right"></i></button></a>
 									</div>
 									<div class="tab-pane" id="highlight-tab2">
-											<a href="{{base_url()}}"><button type="submit" class="btn btn-primary legitRipple">Matematika <i class="icon-arrow-right14 position-right"></i></button></a>
+											<a href="{{base_url()}}"><button type="submit" class="btn btn-primary legitRipple">IPA <i class="icon-arrow-right14 position-right"></i></button></a>
+
+											<a href="{{base_url()}}"><button type="submit" class="btn btn-primary legitRipple">IPS <i class="icon-arrow-right14 position-right"></i></button></a>
+												
 									</div>
 								</div>
 							</div>
