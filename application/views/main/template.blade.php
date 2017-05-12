@@ -38,6 +38,11 @@
 		    margin-top: -5px;
 		    height: 30px;
 		}
+		fieldset {
+			border: 3px groove;
+			display: block;
+			text-align: justify
+		}
 	</style>
 </head>
 

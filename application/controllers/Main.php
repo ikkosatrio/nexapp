@@ -68,6 +68,7 @@ class Main extends CI_Controller {
 		}
 	}
 
+<<<<<<< HEAD
 	public function tryout($url=null,$id=null)
 	{
 		$data         = $this->data;
@@ -110,6 +111,101 @@ class Main extends CI_Controller {
 		echo $this->blade->nggambar('main.tryout.index',$data);
 		}
 	}
+=======
+	public function smp($url=null, $id=null){
+    	$data['halaman']  = "smp";
+        $data = $this->data;
+    	if ($url == "bindo") {
+    		$data['name'] = "bindo";
+    		echo $this->blade->nggambar('mapel_smp.bindo_smp', $data);
+    		return;
+
+            // if ($tes == "nonsastra") {
+            //     $data['name'] = "nonsastra";
+            //     echo $this->blade->nggambar('mapel_smp.kisi_bindo.nonsastra', $data);
+            //     return;
+            // }
+    	} elseif ($url == "matematika") {
+            $data['name'] = "MTK";
+            echo $this->blade->nggambar('mapel_smp.mtk_smp', $data);
+            return;
+        } elseif ($url == "bing") {
+            $data['name'] = "bing";
+            echo $this->blade->nggambar('mapel_smp.bing_smp', $data);
+            return;
+        } elseif ($url == "materi") {
+            $data['name'] = "materi";
+            echo $this->blade->nggambar('mapel_smp.home', $data);
+            return;
+        } elseif ($url == "nonsastra") {
+            $data['name'] = "nonsastra";
+            echo $this->blade->nggambar('mapel_smp.kisi_bindo.nonsastra', $data);
+            return;
+        } elseif ($url == "sastra") {
+            $data['name'] = "sastra";
+            echo $this->blade->nggambar('mapel_smp.kisi_bindo.sastra', $data);
+            return;
+        } elseif ($url == "menulis") {
+            $data['name'] = "menulis";
+            echo $this->blade->nggambar('mapel_smp.kisi_bindo.menulis', $data);
+            return;
+        } elseif ($url == "menyunting") {
+            $data['name'] = "menyunting";
+            echo $this->blade->nggambar('mapel_smp.kisi_bindo.menyunting', $data);
+            return;
+        } elseif ($url == "tanda_baca") {
+            $data['name'] = "tanda_baca";
+            echo $this->blade->nggambar('mapel_smp.kisi_bindo.tanda_baca', $data);
+            return;
+        } elseif ($url == "short") {
+            $data['name'] = "short";
+            echo $this->blade->nggambar('mapel_smp.kisi_bing.short',$data);
+            return;
+        } elseif ($url == "letter") {
+            $data['name'] = "letter";
+            echo $this->blade->nggambar('mapel_smp.kisi_bing.letters',$data);
+            return;
+        } elseif ($url == "invite") {
+            $data['name'] = "invite";
+            echo $this->blade->nggambar('mapel_smp.kisi_bing.invite',$data);
+            return;
+        } elseif ($url == "anoun") {
+           $data['name'] = "anoun";
+            echo $this->blade->nggambar('mapel_smp.kisi_bing.anoun',$data);
+            return; 
+        } elseif ($url == "advert") {
+            $data['name'] = "advert";
+            echo $this->blade->nggambar('mapel_smp.kisi_bing.advertis',$data);
+            return; 
+            
+        } else {
+            echo $this->blade->nggambar('main');
+            return;
+        } 
+    } 
+
+    public function sma($url=null, $id=null) {
+        $data['halaman'] = "sma";
+        $data = $this->data;
+        if ($url == "materi_sma") {
+            $data['name'] = "materi_sma";
+            echo $this->blade->nggambar('mapel_sma.home', $data);
+            return;
+        }
+    }
+
+    public function esq() {
+        $data['halaman'] = "esq";
+        $data = $this->data;
+    	echo $this->blade->nggambar('esq_smp',$data);
+    }
+
+    public function ice() {
+        $data = $this->data;
+        $data['halaman'] = "ice";
+    	echo $this->blade->nggambar('ice_smp',$data);
+    }
+>>>>>>> 496df3a838337c5310942ec11d05a9853208321c
 
 }
 

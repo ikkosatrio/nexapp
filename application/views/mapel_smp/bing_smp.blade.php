@@ -1,10 +1,10 @@
-@extends('template')
+@extends('main.template')
 @section('title')
 NEXAPP
 @endsection
 @section('content')
 <!-- Bordered panels title -->
-<h1 class="content-group text-semibold">KISI - KISI BAHASA INGGRIS</h1>
+<h1 style="font-size: 25px" align="center" class="content-group text-semibold">KISI - KISI BAHASA INGGRIS</h1>
 
 <div class="row">
 	<div class="col-md-3"></div>
@@ -15,10 +15,11 @@ NEXAPP
 			</div>
 			<div class="panel-body" style="font-size: 12px">
 				<ul>
-					<h4><li><a href="#" title="">PENDAPAT YANG MENJADI IDE UTAMA</a></li></h4>
-					<h4><li><a href="#" title="">RINCIAN ARGUMENTASI, RINCIAN LANGKAH-LANGKAH</a></li></h4>
-					<h4><li><a href="#" title="">PLOT ALUR PIKIRAN</a></li></h4>
-					<h4><li><a href="#" title="">REFERENSI MAKNA</a></li></h4>
+					<h4><li><a href="{{base_url('main/smp/short')}}" title="">SHORT MESSAGES</a></li></h4>
+					<h4><li><a href="{{base_url('main/smp/letter')}}" title="">LETTERS/EMAIL</a></li></h4>
+					<h4><li><a href="{{base_url('main/smp/invite')}}" title="">INVITATION</a></li></h4>
+					<h4><li><a href="{{base_url('main/smp/anoun')}}" title="">ANNOUNCEMENT</a></li></h4>
+					<h4><li><a href="{{base_url('main/smp/advert')}}" title="">ADVERTISEMENT</a></li></h4>
 				</ul>
 			</div>
 		</div>

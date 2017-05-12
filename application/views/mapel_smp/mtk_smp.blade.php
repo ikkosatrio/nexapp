@@ -1,10 +1,7 @@
-@extends('template')
-@section('title')
-NEXAPP
-@endsection
+@extends('main.template')
 @section('content')
 <!-- Bordered panels title -->
-<h1 class="content-group text-semibold">KISI - KISI MATEMATIKA</h1>
+<h1 align="center" class="content-group text-semibold">KISI - KISI MATEMATIKA</h1>
 
 <div class="row">
 	<div class="col-md-3"></div>
