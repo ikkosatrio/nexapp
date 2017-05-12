@@ -31,7 +31,7 @@
 					<!-- Action buttons -->
 					<div class="sidebar-category">
 						<div class="category-title">
-							<span>Navigasi Soal</span>
+							<span>Sisa Waktu</span>
 							<ul class="icons-list">
 								<li><a href="#" data-action="collapse"></a></li>
 							</ul>
@@ -58,7 +58,7 @@
 				<div class="alert alert-info alert-styled-left alert-arrow-left alert-component">
 					<button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
 					<h6 class="alert-heading text-semibold">Pemberiatahuan</h6>
-					You can use sidebar categories as separate widgets. To use, add <code>.sidebar-separate</code> class to the sidebar container.
+					Jawab Soal dengan benar dan tepat, jangan tergesa-gesa, baca doa dan percaya diri adalah kunci sukses. Selamat Mengerjakan.
 			    </div>
 			    <!-- /info alert -->
 
@@ -76,7 +76,7 @@
 	                	</div>
 					</div>
 					{{-- {{var_dump($soal)}} --}}
-					<form action="{{base_url('main/prediksi/jawab')}}" id="#formSoal" method="post" accept-charset="utf-8">
+					<form action="{{base_url('main/tryout/jawab')}}" name="formSoal" id="formSoal" method="post" accept-charset="utf-8">
 					@foreach ($soal as $key => $result)
 						{{-- expr --}}
 					<div class="panel-body">
@@ -108,14 +108,15 @@
 					<div class="panel-footer">
 						{{-- <a href="{{base_url('main/prediksi/start/'.$result->id_mapel)}}"><button type="button" class="btn btn-primary pull-left" style="margin-right: 10px">Sebelumnya</button></a> --}}
 						<button type="submit" onclick="hapusCookies()" class="btn btn-primary pull-right" style="margin-right: 10px">Selesai</button>
+						{{-- <a href="sdf"><button type="button" onclick="hapusCookies()"></button></a> --}}
 					</div>
 					</form>
 				</div>
 			</div>
 			<script type="text/javascript">
 				var waktu = 0
-				if (localStorage.getItem("detik2")!=null) {
-					var waktu = localStorage.getItem("detik2");
+				if (localStorage.getItem("detik")!=null) {
+					var waktu = localStorage.getItem("detik");
 				}else{
 					var waktu = {{$mapel->waktu*60}};
 				}
@@ -134,7 +135,7 @@
 				};
 				function simpanCookies() { 
 				    var periods = $('#waktu').countdown('getTimes');
-				    localStorage.setItem('detik2', $.countdown.periodsToSeconds(periods));
+				    localStorage.setItem('detik', $.countdown.periodsToSeconds(periods));
 				    // alert($.countdown.periodsToSeconds(periods)); 
 				};
 				$(document).ready(function(){

@@ -14,7 +14,7 @@
 	<link href="{{base_url()}}assets/main/css/components.css" rel="stylesheet" type="text/css">
 	<link href="{{base_url()}}assets/main/css/colors.css" rel="stylesheet" type="text/css">
 	<!-- /global stylesheets -->
-
+	@yield('style')
 	<!-- Core JS files -->
 	<script type="text/javascript" src="{{base_url()}}assets/main/js/plugins/loaders/pace.min.js"></script>
 	<script type="text/javascript" src="{{base_url()}}assets/main/js/core/libraries/jquery.min.js"></script>
@@ -83,7 +83,7 @@
 
 		<div class="navbar-collapse collapse" id="navbar-second-toggle">
 			<ul class="nav navbar-nav navbar-nav-material">
-				<li><a href="#"><i class="icon-home position-left"></i> Home</a></li>
+				<li><a href="{{base_url('main')}}"><i class="icon-home position-left"></i> Home</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						<i class="icon-make-group position-left"></i> Materi <span class="caret"></span>
