@@ -52,7 +52,7 @@
 							</div>
 
 							<div class="caption">
-								<h6 class="no-margin"><a href="#" class="text-default">Ice Break</a> <a href="#" class="text-muted"><i class="icon-three-bars pull-right"></i></a></h6>
+								<h6 class="no-margin"><a href="{{base_url('main/ice')}}" class="text-default">Ice Break</a> <a href="#" class="text-muted"><i class="icon-three-bars pull-right"></i></a></h6>
 							</div>
 						</div>
 					</div>
@@ -69,7 +69,7 @@
 							</div>
 
 							<div class="caption">
-								<h6 class="no-margin"><a href="#" class="text-default">Esq</a> <a href="#" class="text-muted"><i class="icon-three-bars pull-right"></i></a></h6>
+								<h6 class="no-margin"><a href="{{base_url('main/esq')}}" class="text-default">Esq</a> <a href="#" class="text-muted"><i class="icon-three-bars pull-right"></i></a></h6>
 							</div>
 						</div>
 					</div>
