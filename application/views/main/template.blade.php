@@ -14,7 +14,7 @@
 	<link href="{{base_url()}}assets/main/css/components.css" rel="stylesheet" type="text/css">
 	<link href="{{base_url()}}assets/main/css/colors.css" rel="stylesheet" type="text/css">
 	<!-- /global stylesheets -->
-
+	@yield('style')
 	<!-- Core JS files -->
 	<script type="text/javascript" src="{{base_url()}}assets/main/js/plugins/loaders/pace.min.js"></script>
 	<script type="text/javascript" src="{{base_url()}}assets/main/js/core/libraries/jquery.min.js"></script>

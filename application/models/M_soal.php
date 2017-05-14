@@ -32,10 +32,16 @@ class M_soal extends CI_Model {
 		return $this->db->get_where($table,$where);
 	}
 
+	function cari_data($where,$table){		
+		return $this->db->get_where($table,$where);
+	}
+
 	function soal_mulai($where,$table){
+		$this->db->order_by('soal.id_soal', 'RANDOM');
 		$this->db->join('bab','bab.id_bab=soal.id_bab');
 		$this->db->join('mapel','mapel.id_mapel=bab.id_mapel');
-		$this->db->join('jenjang','jenjang.id_jenjang=mapel.id_jenjang');	
+		$this->db->join('jenjang','jenjang.id_jenjang=mapel.id_jenjang');
+		$this->db->limit(50);	
 		return $this->db->get_where($table,$where);
 	}
 

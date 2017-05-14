@@ -25,7 +25,7 @@
 					<div class="col-lg-6">
 						<div class="panel panel-primary">
 							<div class="panel-heading">
-								<h6 class="panel-title">Prediksi Soal<a class="heading-elements-toggle"><i class="icon-more"></i></a></h6>
+								<h6 class="panel-title">Tryout Soal<a class="heading-elements-toggle"><i class="icon-more"></i></a></h6>
 								<div class="heading-elements">
 									<ul class="icons-list">
 				                		<li><a data-action="collapse"></a></li>
@@ -54,7 +54,7 @@
 								</div>
 							</div>
 							<div class="panel-footer">
-								<a href="{{base_url('main/prediksi/start/'.$mapel->id_mapel)}}"><button type="button" class="btn btn-primary pull-right" style="margin-right: 10px">Mulai</button></a>
+								<a href="{{base_url('main/tryout/start/'.$mapel->id_mapel)}}"><button type="button" class="btn btn-primary pull-right" style="margin-right: 10px">Mulai</button></a>
 								<!-- <button type="button" class="btn btn-primary">Save changes</button> -->
 							</div>
 						</div>
@@ -62,6 +62,5 @@
 					<div class="col-lg-3">
 					</div>
 				</div>
-				
 			<!-- /main content -->
 			@endsection
