@@ -68,7 +68,7 @@ class Main extends CI_Controller {
 		}
 	}
 
-<<<<<<< HEAD
+
 	public function tryout($url=null,$id=null)
 	{
 		$data         = $this->data;
@@ -111,7 +111,7 @@ class Main extends CI_Controller {
 		echo $this->blade->nggambar('main.tryout.index',$data);
 		}
 	}
-=======
+
 	public function smp($url=null, $id=null){
     	$data['halaman']  = "smp";
         $data = $this->data;
@@ -205,8 +205,6 @@ class Main extends CI_Controller {
         $data['halaman'] = "ice";
     	echo $this->blade->nggambar('ice_smp',$data);
     }
->>>>>>> 496df3a838337c5310942ec11d05a9853208321c
-
 }
 
 /* End of file Main.php */
