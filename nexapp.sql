@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2017-05-09 13:13:53
+Date: 2017-05-14 15:31:03
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -130,7 +130,7 @@ INSERT INTO `materi` VALUES ('5', 'addasd', 'asdasd', '8');
 -- ----------------------------
 DROP TABLE IF EXISTS `soal`;
 CREATE TABLE `soal` (
-  `id_soal` int(11) NOT NULL,
+  `id_soal` int(11) NOT NULL AUTO_INCREMENT,
   `isi_soal` text,
   `pilihA` text,
   `pilihB` text,
@@ -140,9 +140,13 @@ CREATE TABLE `soal` (
   `pembahasan` text,
   `id_bab` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_soal`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of soal
 -- ----------------------------
-INSERT INTO `soal` VALUES ('0', 'hallod', 'test a', 'test b', 'test c', 'test d', 'C', 'asdd', '2');
+INSERT INTO `soal` VALUES ('1', 'hallod', 'test a', 'test b', 'test c', 'test d', 'C', 'asdd', '2');
+INSERT INTO `soal` VALUES ('2', 'ini soal statistika', 'ini a', 'ini b', 'ini c', 'ini', 'B', 'asd', '8');
+INSERT INTO `soal` VALUES ('3', 'ini soal statistik 2', 'asd', 'gfh', 'asd', 'xcv', 'B', 'xcvxcvxc', '8');
+INSERT INTO `soal` VALUES ('4', 'aljabar', 'cv', 'xcv', 'vbn', 'cvbcv', 'D', 'dzsfrsdf', '2');
+INSERT INTO `soal` VALUES ('5', 'indo', 'asda', 'asds', 'asdd', 'asds', 'A', 'asd', '1');
