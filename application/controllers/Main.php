@@ -111,7 +111,7 @@ class Main extends CI_Controller {
 		echo $this->blade->nggambar('main.tryout.index',$data);
 		}
 	}
-	
+
 	public function smp($url=null, $id=null){
     	$data['halaman']  = "smp";
         $data = $this->data;
