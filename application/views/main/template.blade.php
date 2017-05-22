@@ -43,10 +43,23 @@
 			display: block;
 			text-align: justify
 		}
+		body {
+			background: url("{{base_url()}}assets/images/bagroundnexapp-01.jpg") no-repeat center center fixed;
+			-webkit-background-size: 100% 100%;
+			-moz-background-size: 100% 100%;
+			-o-background-size: 100% 100%;
+			background-size: 100% 100%;
+			opacity: 0.9;
+    		/* filter: alpha(opacity=50); */
+			/* width: 100%;
+			height: 100%; */
+			 
+		}
 	</style>
 </head>
 
 <body>
+	{{-- <img src="{{base_url()}}assets/images/bagroundnexapp-01.jpg" alt="" class="bg"> --}}
 	<!-- Main navbar -->
 	<div class="navbar navbar-inverse bg-indigo">
 		<div class="navbar-header">
