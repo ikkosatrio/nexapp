@@ -27,7 +27,7 @@
 						<div class="thumbnail">
 							<div class="thumb">
 							<a href="#" data-toggle="modal" data-target="#modal_materi" class="text-default">
-								<img src="{{base_url()}}assets/main/images/placeholder.jpg" alt="">
+								<img src="{{base_url()}}assets/main/images/icon/materi-01.png" alt="">
 								</a>
 								<div class="caption-overflow">
 									<span>
@@ -46,7 +46,7 @@
 						<div class="thumbnail">
 							<div class="thumb">
 								<a href="{{base_url('main/ice')}}" data-popup="lightbox">
-									<img src="{{base_url()}}assets/main/images/placeholder.jpg" alt="">
+									<img src="{{base_url()}}assets/main/images/icon/ice breaking-01.png" alt="">
 								</a>
 								<div class="caption-overflow">
 									<span>
@@ -65,7 +65,7 @@
 						<div class="thumbnail">
 							<div class="thumb">
 								<a href="{{base_url('main/esq')}}" class="text-default">
-									<img src="{{base_url()}}assets/main/images/placeholder.jpg" alt="">
+									<img src="{{base_url()}}assets/main/images/icon/esq-01.png" alt="">
 								</a>
 								<div class="caption-overflow">
 									<span>
@@ -84,7 +84,7 @@
 						<div class="thumbnail">
 							<div class="thumb">
 								<a href="#" data-toggle="modal" data-target="#modal_simulasi" class="text-default">
-									<img src="{{base_url()}}assets/main/images/placeholder.jpg" alt="">
+									<img src="{{base_url()}}assets/main/images/icon/simulasi-01.png" alt="">
 								</a>
 								<div class="caption-overflow">
 									<span>
@@ -102,7 +102,7 @@
 						<div class="thumbnail">
 							<div class="thumb">
 								<a href="#" class="text-default">
-									<img src="{{base_url()}}assets/main/images/placeholder.jpg" alt="">
+									<img src="{{base_url()}}assets/main/images/icon/tips-01.png" alt="">
 								</a>
 								<div class="caption-overflow">
 									<span>
@@ -119,7 +119,7 @@
 					<div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
 						<div class="thumbnail">
 							<div class="thumb">
-								<img src="{{base_url()}}assets/main/images/placeholder.jpg" alt="">
+								<img src="{{base_url()}}assets/main/images/icon/abouts us-01.png" alt="">
 								<div class="caption-overflow">
 									<span>
 										<a href="{{base_url()}}assets/main/images/placeholder.jpg" data-popup="lightbox" class="btn border-white text-white btn-flat btn-icon btn-rounded"><i class="icon-plus3"></i></a>
