@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2017-05-09 13:13:53
+Date: 2017-05-21 21:34:41
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -70,7 +70,7 @@ CREATE TABLE `config` (
 -- ----------------------------
 -- Records of config
 -- ----------------------------
-INSERT INTO `config` VALUES ('1', 'NexApp', 'info@cakcode.co.id', '+6231 5630872', 'Universitas 17 Agustus 1945 Surabaya', '<p><b><i>Web Development and Design</i></b></p>', 'cak1.png', 'codeigniter-logo.png', '																																																																																																																																																												Web Development and Design sdsd\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											', '																																																																																																																																																												Web Development and Design dssd\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											');
+INSERT INTO `config` VALUES ('1', 'NexApp', 'info@cakcode.co.id', '+6231 5630872', 'Universitas 17 Agustus 1945 Surabaya', '<p><b><i>Web Development and Design</i></b></p>', 'Untitled-11.png', 'Untitled-1_(1).png', '																																																																																																																																																																																																																								Web Development and Design sdsd\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											', '																																																																																																																																																																																																																								Web Development and Design dssd\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											');
 
 -- ----------------------------
 -- Table structure for jenjang
@@ -126,11 +126,39 @@ CREATE TABLE `materi` (
 INSERT INTO `materi` VALUES ('5', 'addasd', 'asdasd', '8');
 
 -- ----------------------------
+-- Table structure for member
+-- ----------------------------
+DROP TABLE IF EXISTS `member`;
+CREATE TABLE `member` (
+  `id_member` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(250) NOT NULL,
+  `email` varchar(250) NOT NULL,
+  `phone` varchar(250) NOT NULL,
+  `gender` enum('Pria','Wanita') NOT NULL DEFAULT 'Pria',
+  `password` text NOT NULL,
+  `address` text NOT NULL,
+  `lastlog` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `ipaddress` varchar(100) NOT NULL,
+  `status_member` enum('basic','premium') NOT NULL DEFAULT 'basic',
+  `status` int(11) NOT NULL,
+  `readed` int(11) NOT NULL,
+  PRIMARY KEY (`id_member`)
+) ENGINE=InnoDB AUTO_INCREMENT=2076 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of member
+-- ----------------------------
+INSERT INTO `member` VALUES ('2039', 'ikko', 'ikko@yuhu.com', '08', 'Pria', '123', '123', '2017-05-21 20:25:45', '', 'basic', '0', '0');
+INSERT INTO `member` VALUES ('2068', 'asdasd', 'cakcode@gmail.com', '234234', 'Pria', '1f82ea75c5cc526729e2d581aeb3aeccfef4407e', 'asdas', '2017-05-21 16:05:39', '::1', 'premium', '1', '0');
+INSERT INTO `member` VALUES ('2074', 'asdasdasd', 'ikkosatrio0@gmail.com', '0657567', 'Pria', '1f82ea75c5cc526729e2d581aeb3aeccfef4407e', 'asdas', '2017-05-21 15:58:30', '::1', 'basic', '0', '0');
+INSERT INTO `member` VALUES ('2075', 'elka', 'elkaajib@gmail.com', '123123', 'Pria', 'e2d2fdf4f948f1f647b4cde92361996e0f9dad55', 'asek joss', '2017-05-21 16:00:05', '::1', 'basic', '0', '0');
+
+-- ----------------------------
 -- Table structure for soal
 -- ----------------------------
 DROP TABLE IF EXISTS `soal`;
 CREATE TABLE `soal` (
-  `id_soal` int(11) NOT NULL,
+  `id_soal` int(11) NOT NULL AUTO_INCREMENT,
   `isi_soal` text,
   `pilihA` text,
   `pilihB` text,
@@ -140,9 +168,13 @@ CREATE TABLE `soal` (
   `pembahasan` text,
   `id_bab` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_soal`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of soal
 -- ----------------------------
-INSERT INTO `soal` VALUES ('0', 'hallod', 'test a', 'test b', 'test c', 'test d', 'C', 'asdd', '2');
+INSERT INTO `soal` VALUES ('1', 'hallod', 'test a', 'test b', 'test c', 'test d', 'C', 'asdd', '2');
+INSERT INTO `soal` VALUES ('2', 'ini soal statistika', 'ini a', 'ini b', 'ini c', 'ini', 'B', 'asd', '8');
+INSERT INTO `soal` VALUES ('3', 'ini soal statistik 2', 'asd', 'gfh', 'asd', 'xcv', 'B', 'xcvxcvxc', '8');
+INSERT INTO `soal` VALUES ('4', 'aljabar', 'cv', 'xcv', 'vbn', 'cvbcv', 'D', 'dzsfrsdf', '2');
+INSERT INTO `soal` VALUES ('5', '<img src=\"https://fshzaaiqbalmandaku.files.wordpress.com/2014/10/wedhuss.jpg?w=1400\" title=\"Image: https://fshzaaiqbalmandaku.files.wordpress.com/2014/10/wedhuss.jpg?w=1400\">indo', 'asda', 'asds', 'asdd', 'asds', 'A', 'asd', '1');

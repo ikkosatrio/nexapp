@@ -7,5 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'org\\bovigo\\vfs' => array($vendorDir . '/mikey179/vfsStream/src/main/php'),
+    'Valitron' => array($vendorDir . '/vlucas/valitron/src'),
     'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib'),
 );

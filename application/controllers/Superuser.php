@@ -14,6 +14,7 @@ class Superuser extends CI_Controller {
 		$this->blade->sebarno('ctrl', $this);
 		$this->load->model('m_jenjang');
 		$this->load->model('m_mapel');
+		$this->load->model('m_member');
 		$this->load->model('m_bab');
 		$this->load->model('m_config');
 		$this->load->model('m_materi');
@@ -97,6 +98,49 @@ class Superuser extends CI_Controller {
 	}
 	// End Mapel
 	
+	// Start Member
+	public function member($url=null,$id=null){
+		$data            = $this->data;
+		$data['menu']    = "member";
+		$data['member'] = $this->m_member->tampil_data('member')->result();
+
+		if($url=="premium"){
+			$data = array(
+				'status_member'   => 'premium'
+			);
+		 
+			$where = array(
+				'id_member' => $id
+			);
+		 
+			if($this->m_member->update_data($where,$data,'member')){
+			}
+			redirect('superuser/member');
+		}else if ($url=="basic") {
+			$data = array(
+				'status_member'   => 'basic'
+			);
+		 
+			$where = array(
+				'id_member' => $id
+			);
+		 
+			if($this->m_member->update_data($where,$data,'member')){
+			}
+				redirect('superuser/member');
+		}else if ($url=="deleted") {
+			$where = array('id_member' => $id);
+			if ($this->m_member->hapus_data($where,'member')) {
+			}
+				redirect('superuser/member');	
+		}else{
+			echo $this->blade->nggambar('admin.member.index',$data);	
+			return;
+		}
+	}
+	// End Member
+
+
 	//Start Jenjang 
 	public function jenjang($url=null,$id=null){
 		$data            = $this->data;

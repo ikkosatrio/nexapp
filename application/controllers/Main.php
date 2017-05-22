@@ -5,6 +5,11 @@ class Main extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+
+		if(!$this->session->userdata('authmember')){
+			redirect('landing');
+		}
+
 		$this->blade->sebarno('ctrl', $this);
 		$this->load->model('m_jenjang');
 		$this->load->model('m_mapel');
@@ -12,6 +17,7 @@ class Main extends CI_Controller {
 		$this->load->model('m_config');
 		$this->load->model('m_materi');
 		$this->load->model('m_soal');
+		$this->load->model('m_member');
 
 		$this->data['config'] 			= $this->m_config->ambil('config',1)->row();
 	}
@@ -23,6 +29,25 @@ class Main extends CI_Controller {
 		$data['mapel']   = $this->m_mapel->tampil_data('mapel')->result();
 		$data['jenjang'] = $this->m_jenjang->tampil_data('jenjang')->result();
 		echo $this->blade->nggambar('main.home',$data);
+	}
+
+	public function email($type){
+		$data 		= $this->data;
+
+		switch ($type) {
+			case 'register':
+				$data             	 = $this->data;
+				$where = array(
+					'id_member' => '2039'
+				);
+				$data['member']		= $this->m_member->detail($where,'member')->row();
+				echo $this->blade->nggambar('email.member.register',$data);	
+				break;
+			default:
+				exit('opps');
+				break;
+		}
+		
 	}
 
 	public function prediksi($url=null,$id=null)
@@ -205,6 +230,7 @@ class Main extends CI_Controller {
         $data['halaman'] = "ice";
     	echo $this->blade->nggambar('ice_smp',$data);
     }
+
 }
 
 /* End of file Main.php */

@@ -294,13 +294,13 @@
 								<li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
 								<li class="{{match($menu,'dashboard','active')}}"><a href="{{base_url('superuser')}}"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
 								<li class="{{match($menu,'config','active')}}"><a href="{{base_url('superuser/config')}}"><i class="icon-gear"></i> <span>Configurasi Website</span></a></li>
-								<li class="{{match($menu,'member','active')}}">
+								{{-- <li class="{{match($menu,'member','active')}}">
 									<a href="#"><i class="icon-stack2"></i> <span>Member</span></a>
 									<ul>
 										<li><a href="layout_navbar_fixed.html">Fixed navbar</a></li>
 										<li><a href="layout_navbar_sidebar_fixed.html">Fixed navbar &amp; sidebar</a></li>
 									</ul>
-								</li>
+								</li> --}}
 								
 								<!-- /main -->
 
@@ -322,6 +322,7 @@
 								</li>
 								<li class="{{match($menu,'mapel','active')}}"><a href="{{base_url('superuser/mapel')}}"><i class="icon-pencil3"></i> <span>Mata Pelajaran</span></a></li>
 								<li class="{{match($menu,'jenjang','active')}}"><a href="{{base_url('superuser/jenjang')}}"><i class="icon-pencil3"></i> <span>Jenjang</span></a></li>
+								<li class="{{match($menu,'member','active')}}"><a href="{{base_url('superuser/member')}}"><i class="icon-user"></i> <span>Member</span></a></li>
 								<!-- /forms -->
 							</ul>
 						</div>

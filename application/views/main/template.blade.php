@@ -74,17 +74,18 @@
 
 			<!-- <p class="navbar-text"><span class="label bg-success-400">Online</span></p> -->
 			<ul class="nav navbar-nav navbar-right">
+				<p class="navbar-text"><span class="label bg-warning-400">{{ucwords($ctrl->session->userdata('authmember_status'))}}</span></p>
 				<li class="dropdown dropdown-user">
 					<a class="dropdown-toggle" data-toggle="dropdown">
 						<img src="{{base_url()}}assets/main/images/placeholder.jpg" alt="">
-						<span>Login</span>
+						<span>{{ucwords($ctrl->session->userdata('authmember_name'))}}</span>
 						<i class="caret"></i>
 					</a>
 
 					<ul class="dropdown-menu dropdown-menu-right">
 						<li class="divider"></li>
 						<li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
-						<li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+						<li><a href="{{base_url('authentication/logout')}}"><i class="icon-switch2"></i> Logout</a></li>
 					</ul>
 				</li>
 			</ul>
