@@ -9,6 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html lang="en">
 <head>
 <title>{{$config->name}}</title>
+<link rel="shortcut icon" type="image/png" href="{{base_url()}}assets/images/website/config/icon/{{$config->icon}}"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Newcomer Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -57,7 +58,7 @@ Tidak hanya dibimbing oleh tutor-tutor terbaik, NexApp juga memiliki materi leng
 										<a href="#" class="menu__link" data-toggle="modal" data-target="#myModal">LOGIN</a>
 									</div>
 									<div class="agileits_w3layouts_more menu__item">
-										<a href="#" class="menu__link" data-toggle="modal" data-target="#myModal2">DAFTAR</a>
+										<a href="#" class="menu__link" data-toggle="modal" data-target="#myModal2">DAFTAR GRATIS</a>
 									</div>
 								</div>	
 							</div>
@@ -73,7 +74,7 @@ Tidak hanya dibimbing oleh tutor-tutor terbaik, NexApp juga memiliki materi leng
 										<a href="#" class="menu__link" data-toggle="modal" data-target="#myModal">LOGIN</a>
 									</div>
 									<div class="agileits_w3layouts_more menu__item">
-										<a href="#" class="menu__link" data-toggle="modal" data-target="#myModal2">DAFTAR</a>
+										<a href="#" class="menu__link" data-toggle="modal" data-target="#myModal2">DAFTAR GRATIS</a>
 									</div>
 								</div>	
 							</div>
@@ -89,7 +90,7 @@ Tidak hanya dibimbing oleh tutor-tutor terbaik, NexApp juga memiliki materi leng
 										<a href="#" class="menu__link" data-toggle="modal" data-target="#myModal">LOGIN</a>
 									</div>
 									<div class="agileits_w3layouts_more menu__item">
-										<a href="#" class="menu__link" data-toggle="modal" data-target="#myModal2">DAFTAR</a>
+										<a href="#" class="menu__link" data-toggle="modal" data-target="#myModal2">DAFTAR GRATIS</a>
 									</div>
 								</div>
 							</div>
@@ -150,12 +151,12 @@ Tidak hanya dibimbing oleh tutor-tutor terbaik, NexApp juga memiliki materi leng
 		  </div>
 		  <div class="ab-w3-agile-inner">
 	       <div class="col-md-6 ab-w3-agile-part">
-				<h4>Awesome Features</h4>
-		     <p>Lorem ipsum dolor sit amet, consectetur adipisc elit.</p>
+				{{-- <h4>Awesome Features</h4>
+		     <p>Lorem ipsum dolor sit amet, consectetur adipisc elit.</p> --}}
 	       </div>
 			 <div class="col-md-6 ab-w3-agile-part two">
-				<h4>Awesome Features</h4>
-		     <p>Lorem ipsum dolor sit amet, consectetur adipisc elit.</p>
+				{{-- <h4>Awesome Features</h4>
+		     <p>Lorem ipsum dolor sit amet, consectetur adipisc elit.</p> --}}
 	       </div>
 			<div class="clearfix"></div>		   
 	  </div>	
