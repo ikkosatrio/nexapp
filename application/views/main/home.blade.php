@@ -106,7 +106,7 @@
 								</a>
 								<div class="caption-overflow">
 									<span>
-										<a href="{{base_url()}}assets/main/images/placeholder.jpg" data-popup="lightbox" class="btn border-white text-white btn-flat btn-icon btn-rounded"><i class="icon-plus3"></i></a>
+										<a href="{{base_url()}}main/tips" data-popup="lightbox" class="btn border-white text-white btn-flat btn-icon btn-rounded"><i class="icon-plus3"></i></a>
 									</span>
 								</div>
 							</div>

@@ -40,7 +40,7 @@ NEXAPP
 		</div>
 	</a>
 
-	<a href="{{base_url()}}home/ice" class="info">
+	<a href="{{base_url()}}home/tips" class="info">
 		<div class="view second-effect">
 			<img src="{{base_url()}}assets/images/5-01.png" />
 			<div class="mask">

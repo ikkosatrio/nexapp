@@ -231,6 +231,12 @@ class Main extends CI_Controller {
     	echo $this->blade->nggambar('ice_smp',$data);
     }
 
+    function tips() {
+    	$data = $this->data;
+        $data['halaman'] = "tips";
+    	echo $this->blade->nggambar('tips',$data);	
+    }
+
 }
 
 /* End of file Main.php */
