@@ -209,12 +209,12 @@ class Main extends CI_Controller {
         } 
     } 
 
-    public function sma($url=null, $id=null) {
-        $data['halaman'] = "sma";
+    public function sma_ips($url=null, $id=null) {
+        $data['halaman'] = "sma_ips";
         $data = $this->data;
-        if ($url == "materi_sma") {
-            $data['name'] = "materi_sma";
-            echo $this->blade->nggambar('mapel_sma.home', $data);
+        if ($url == "geografi") {
+            $data['name'] = "geografi";
+            echo $this->blade->nggambar('sma_ips.geografi', $data);
             return;
         }
     }

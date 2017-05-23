@@ -53,7 +53,9 @@
     		/* filter: alpha(opacity=50); */
 			/* width: 100%;
 			height: 100%; */
-			 
+		}
+		p, h4 {
+			text-align: justify;
 		}
 	</style>
 </head>

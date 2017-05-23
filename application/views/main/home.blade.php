@@ -151,7 +151,8 @@
 								<ul class="nav nav-tabs nav-tabs-highlight">
 								
 									<li><a href="#highlight-tab1" data-toggle="tab" class="legitRipple">SMP</a></li>
-									<li><a href="#highlight-tab2" data-toggle="tab" class="legitRipple">SMA</a></li>
+									<li><a href="#highlight-tab2" data-toggle="tab" class="legitRipple">SMA IPA</a></li>
+									<li><a href="#highlight-tab3" data-toggle="tab" class="legitRipple">SMA IPS</a></li>
 								</ul>
 
 								<div class="tab-content">
@@ -165,9 +166,37 @@
 											<a href="{{base_url('main/smp/ipa')}}"><button type="submit" class="btn btn-primary legitRipple">IPA <i class="icon-arrow-right14 position-right"></i></button></a>
 									</div>
 									<div class="tab-pane" id="highlight-tab2">
-											<a href="{{base_url()}}"><button type="submit" class="btn btn-primary legitRipple">IPA <i class="icon-arrow-right14 position-right"></i></button></a>
+										<div class="row">
+											<div class="col-md-12">
+												<a href="{{base_url()}}"><button type="submit" class="btn btn-primary legitRipple">MATEMATIKA <i class="icon-arrow-right14 position-right"></i></button></a>
 
-											<a href="{{base_url()}}"><button type="submit" class="btn btn-primary legitRipple">IPS <i class="icon-arrow-right14 position-right"></i></button></a>
+												<a href="{{base_url()}}"><button type="submit" class="btn btn-primary legitRipple">BAHASA INGGRIS <i class="icon-arrow-right14 position-right"></i></button></a>
+
+
+												<a href="{{base_url()}}"><button type="submit" class="btn btn-primary legitRipple">BAHASA INDONESIA <i class="icon-arrow-right14 position-right"></i></button></a>	
+											</div>
+										</div>
+
+										<div class="row" style="margin-top: 15px">
+											<div class="col-md-12">
+											<a href="{{base_url()}}" style="margin-top: 200px"><button type="submit" class="btn btn-primary legitRipple">FISIKA <i class="icon-arrow-right14 position-right"></i></button></a>
+											
+
+											<a href="{{base_url()}}"><button type="submit" class="btn btn-primary legitRipple">KIMIA <i class="icon-arrow-right14 position-right"></i></button></a>	
+
+
+											<a href="{{base_url()}}"><button type="submit" class="btn btn-primary legitRipple">BIOLOGI <i class="icon-arrow-right14 position-right"></i></button></a>	
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane" id="highlight-tab3">
+											<a href="{{base_url()}}"><button type="submit" class="btn btn-primary legitRipple">EKONOMI <i class="icon-arrow-right14 position-right"></i></button></a>
+
+											<a href="{{base_url()}}"><button type="submit" class="btn btn-primary legitRipple">SEJARAH <i class="icon-arrow-right14 position-right"></i></button></a>
+
+											<a href="{{base_url()}}"><button type="submit" class="btn btn-primary legitRipple">SOSIOLIGI <i class="icon-arrow-right14 position-right"></i></button></a>
+
+											<a href="{{base_url()}}main/sma_ips/geografi"><button type="submit" class="btn btn-primary legitRipple">GEOGRAFI <i class="icon-arrow-right14 position-right"></i></button></a>
 												
 									</div>
 								</div>
