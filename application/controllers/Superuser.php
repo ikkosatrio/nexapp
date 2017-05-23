@@ -48,9 +48,13 @@ class Superuser extends CI_Controller {
 		else if ($url == "created" && $this->input->is_ajax_request() == true){
 			$nm_mapel   = $this->input->post('nm_mapel');
 			$nm_jenjang = $this->input->post('jenjang');
+			$jumlah_soal   = $this->input->post('jumlah_soal');
+			$waktu = $this->input->post('waktu');
 			$data = array(
 				'nm_mapel'   => $nm_mapel,
-				'id_jenjang' => $nm_jenjang
+				'id_jenjang' => $nm_jenjang,
+				'waktu' => $waktu,
+				'jumlah_soal' => $jumlah_soal
 			);
 
 			if($this->m_mapel->input_data($data,'mapel')){
@@ -68,12 +72,16 @@ class Superuser extends CI_Controller {
 			
 		}
 		else if ($url=="updated" && $id!=null && $this->input->is_ajax_request() == true){
-			$nm_mapel   = $this->input->post('nm_mapel');
-			$nm_jenjang = $this->input->post('jenjang');
-		 
+			$nm_mapel    = $this->input->post('nm_mapel');
+			$nm_jenjang  = $this->input->post('jenjang');
+			$jumlah_soal = $this->input->post('jumlah_soal');
+			$waktu       = $this->input->post('waktu');
+			
 			$data = array(
 				'nm_mapel'   => $nm_mapel,
-				'id_jenjang' => $nm_jenjang
+				'id_jenjang' => $nm_jenjang,
+				'waktu' => $waktu,
+				'jumlah_soal' => $jumlah_soal
 			);
 		 
 			$where = array(
@@ -423,6 +431,8 @@ class Superuser extends CI_Controller {
 					$name           = $this->input->post('name');
 					$email          = $this->input->post('email');
 					$phone          = $this->input->post('phone');
+					$facebook          = $this->input->post('facebook');
+					$instagram          = $this->input->post('instagram');
 					$address        = $this->input->post('address');
 					$description    = $this->input->post('description');
 					$meta_deskripsi = $this->input->post('meta_deskripsi');
@@ -432,6 +442,8 @@ class Superuser extends CI_Controller {
 						'name'           => $name,
 						'email'          => $email,
 						'phone'          => $phone,
+						'facebook'       => $facebook,
+						'instagram'      => $instagram,
 						'address'        => $address,
 						'description'    => $description,
 						'icon'           => $iconname,

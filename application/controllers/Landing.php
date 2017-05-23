@@ -5,6 +5,11 @@ class Landing extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		
+		if($this->session->userdata('authmember')){
+			redirect('main');
+		}
+		
 		$this->load->model('m_config');
 		$this->data['config'] 			= $this->m_config->ambil('config',1)->row();
 	}

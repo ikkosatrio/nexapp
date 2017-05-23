@@ -30,6 +30,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700" rel="stylesheet">
 <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300i,400,400i,600,600i,700" rel="stylesheet">
 <!-- //web-fonts -->
+<style type="text/css" media="screen">
+	.agileits-banner-info p {
+    	color: #ecf0f1;
+    }
+</style>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">  
@@ -44,10 +49,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="w3layouts-banner-top">
 
 							<div class="container">
-								<div class="agileits-banner-info">
+								<div class="agileits-banner-info" style="padding-top: 100px;">
 									<h3>Belajar Online dengan Materi Berkualitas dan Tutor Terbaik</h3>
 											<p>Mencari materi belajar yang sesuai dan guru yang asik?
-Tidak hanya dibimbing oleh tutor-tutor terbaik, Quipper Video juga memiliki materi lengkap sesuai kurikulum sekolah untuk kelas 9, 10, 11, dan 12.</p>
+Tidak hanya dibimbing oleh tutor-tutor terbaik, NexApp juga memiliki materi lengkap sesuai kurikulum sekolah untuk kelas 9, 10, 11, dan 12.</p>
 									<div class="agileits_w3layouts_more menu__item">
 										<a href="#" class="menu__link" data-toggle="modal" data-target="#myModal">LOGIN</a>
 									</div>
@@ -61,9 +66,9 @@ Tidak hanya dibimbing oleh tutor-tutor terbaik, Quipper Video juga memiliki mate
 					<li>
 						<div class="w3layouts-banner-top w3layouts-banner-top1">
 							<div class="container">
-								<div class="agileits-banner-info">
+								<div class="agileits-banner-info" style="padding-top: 100px;">
 									<h3>Bayarnya Sekali,Bebas Belajar Berkali-kali</h3>
-										<p>Quipper video memiliki materi sesuai kurikulum sekolah, dilengkapi soal dan pembahasan untuk melatih pemahamanmu. Bayarnya sekali, bebas belajar berkali-kali. Selesaikan pendaftaran untuk coba belajar gratis sekarang!</p>
+										<p>NexApp memiliki materi sesuai kurikulum sekolah, dilengkapi soal dan pembahasan untuk melatih pemahamanmu. Bayarnya sekali, bebas belajar berkali-kali. Selesaikan pendaftaran untuk coba belajar gratis sekarang!</p>
 									<div class="agileits_w3layouts_more menu__item">
 										<a href="#" class="menu__link" data-toggle="modal" data-target="#myModal">LOGIN</a>
 									</div>
@@ -77,9 +82,9 @@ Tidak hanya dibimbing oleh tutor-tutor terbaik, Quipper Video juga memiliki mate
 					<li>
 						<div class="w3layouts-banner-top w3layouts-banner-top2">
 							<div class="container">
-								<div class="agileits-banner-info">
+								<div class="agileits-banner-info" style="padding-top: 100px;">
 									<h3>Pengalaman Belajar Terbaik dengan Biaya Terjangkau</span></h3>
-									<p>Kami ingin pendidikan terbaik dapat di akses siapa saja. Dapatkan akses penuh Quipper Video ke ratusan jam video pembelajaran dan ribuan soal-soal latihan dengan harga terjangkau!</p>
+									<p>Kami ingin pendidikan terbaik dapat di akses siapa saja. Dapatkan akses penuh NexApp ke ratusan jam video pembelajaran dan ribuan soal-soal latihan dengan harga terjangkau!</p>
 									<div class="agileits_w3layouts_more menu__item">
 										<a href="#" class="menu__link" data-toggle="modal" data-target="#myModal">LOGIN</a>
 									</div>
@@ -107,7 +112,7 @@ Tidak hanya dibimbing oleh tutor-tutor terbaik, Quipper Video juga memiliki mate
 			<!-- header -->
 		<div class="header-w3layouts"> 
 			<!-- Navigation -->
-			<nav class="navbar navbar-default navbar-fixed-top" style="background:rgba(52, 152, 219, 0.65);">
+			<nav class="navbar navbar-default navbar-fixed-top" style="background:rgba(236, 240, 241,0.8)">
 				<div class="container">
 					<div class="navbar-header page-scroll">
 						{{-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -116,7 +121,7 @@ Tidak hanya dibimbing oleh tutor-tutor terbaik, Quipper Video juga memiliki mate
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button> --}}
-						<a class="navbar-brand" href="index.html"><img  style="height: 46px; margin-top: -18px" src="{{base_url()}}assets/images/website/config/logo/{{$config->logo}}"></a>
+						<a class="navbar-brand" href="index.html"><img style="height: 46px; margin-top: -18px;" src="{{base_url()}}assets/images/website/config/logo/{{$config->logo}}"></a>
 					</div> 
 				</div>
 				<!-- /.container -->
@@ -130,12 +135,17 @@ Tidak hanya dibimbing oleh tutor-tutor terbaik, Quipper Video juga memiliki mate
 	  </div>
       <div class="col-md-6 ab-w3-agile-info">
 	   <div class="ab-w3-agile-info-text">
-	   <p class="sub-text one">Who We Are</p>
-	     <h2 class="title-w3">About Us</h2>
+	   <p class="sub-text one">Siapa Kami</p>
+	     <h2 class="title-w3">Tentang Kami</h2>
 		 
-		 <p>Lorem ipsum dolor sit amet, consectetur adipisc elit. Proin ultricies vestibulum velit.Lorem ipsum dolor sit amet.when an unknown printer took a galley of type and scrambled it to make a type specimen book.Proin ultricies vestibulum velit.Lorem ipsum dolor sit amet.when an unknown printer took  Proin ultricies vestibulum velit.Lorem ipsum dolor sit amet</p>
-			<div class="agileits_w3layouts_more menu__item one">
-				<a href="#" class="menu__link" data-toggle="modal" data-target="#myModal">Learn More</a>
+		 {!!$config->description!!}
+			<div class="agileits_w3layouts_more menu__item one custom">
+				<ul style="font-size: 1.5em; list-style-type: none;">
+				    <li><a href="https://www.facebook.com/{{$config->facebook}}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>{{$config->facebook}}</li></a>
+				    <li><a href="https://www.instagram.com/{{$config->instagram}}" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i>{{$config->instagram}}</li></a>
+				    <li><a href="mailto:{{$config->email}}"><i class="fa fa-envelope-o" aria-hidden="true"></i>{{$config->email}}</li></a>
+				    <li><a href="tel:{{$config->phone}}"><i class="fa fa-mobile" aria-hidden="true"></i>{{$config->phone}}</li></a>
+				</ul>
 			</div>
 		  </div>
 		  <div class="ab-w3-agile-inner">
@@ -162,10 +172,12 @@ Tidak hanya dibimbing oleh tutor-tutor terbaik, Quipper Video juga memiliki mate
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<div class="row">
+							<div class="col-md-12">	
 							<form id="form-login" action="{{base_url('authentication/go/member')}}">
 								<div class="panel panel-body login-form">
 									<div class="text-center">
-										<img class="img-responsive mar-center" style="max-width:100px;height:100px;display:block;margin-left:auto;margin-right:auto;" src="http://localhost/nexapp/assets/images/website/config/icon/cak1.png">
+										<img class="img-responsive mar-center" style="max-width:100px;height:100px;display:block;margin-left:auto;margin-right:auto;" src="{{base_url()}}assets/images/website/config/icon/{{$config->icon}}">
 										<h5 class="content-group">Login to your account <small class="display-block">NexApp</small></h5>
 									</div>
 
@@ -190,6 +202,8 @@ Tidak hanya dibimbing oleh tutor-tutor terbaik, Quipper Video juga memiliki mate
 									
 								</div>
 							</form>
+							</div>
+							</div>
 						</div>
 					</div>
 				</div>

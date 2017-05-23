@@ -6,34 +6,7 @@ NEXAPP
 <div class="page-container">
   <div class="page-content">
     <div class="content-wrapper">
-      <div class="row">
-  <div class="col-sm-12 col-md-4">
-    <div class="thumbnail">
-      <iframe width="100%" height="300px" src="https://www.youtube.com/embed/fPqo3YjqH6U" frameborder="0" allowfullscreen></iframe>
-      <div class="caption">
-        <h3>Tes Idiot</h3>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-12 col-md-4">
-    <div class="thumbnail">
-      <iframe width="100%" height="300px" src="https://www.youtube.com/embed/_jbYeyqHZm4" frameborder="0" allowfullscreen></iframe>
-      <div class="caption">
-        <h3>tes IQ#2 - Seberapa pintarkah anda?</h3>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-12 col-md-4">
-    <div class="thumbnail">
-      <iframe width="100%" height="300px" src="https://www.youtube.com/embed/UAsEWyNP2Cg" frameborder="0" allowfullscreen></iframe>
-      <div class="caption">
-        <h3>Thumbnail label</h3>
-      </div>
-    </div>
-  </div>
-</div>  
+      
 
 <div class="row">
   <div class="col-sm-12 col-md-4">
@@ -91,7 +64,35 @@ NEXAPP
       </div>
     </div>
   </div>
-</div>  
+</div>
+<div class="row">
+  <div class="col-sm-12 col-md-4">
+    <div class="thumbnail">
+      <iframe width="100%" height="300px" src="https://www.youtube.com/embed/fPqo3YjqH6U" frameborder="0" allowfullscreen></iframe>
+      <div class="caption">
+        <h3>Tes Idiot</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12 col-md-4">
+    <div class="thumbnail">
+      <iframe width="100%" height="300px" src="https://www.youtube.com/embed/_jbYeyqHZm4" frameborder="0" allowfullscreen></iframe>
+      <div class="caption">
+        <h3>tes IQ#2 - Seberapa pintarkah anda?</h3>
+      </div>
+    </div>
+  </div>
+
+{{--   <div class="col-sm-12 col-md-4">
+    <div class="thumbnail">
+      <iframe width="100%" height="300px" src="https://www.youtube.com/embed/UAsEWyNP2Cg" frameborder="0" allowfullscreen></iframe>
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+      </div>
+    </div>
+  </div> --}}
+</div>    
 
 
 

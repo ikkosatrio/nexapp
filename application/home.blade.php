@@ -150,9 +150,14 @@
 							<div class="tabbable">
 								<ul class="nav nav-tabs nav-tabs-highlight">
 								
+<<<<<<< HEAD
 									<li><a href="#highlight-tab1" data-toggle="tab" class="legitRipple">SMP</a></li>
 									<li><a href="#highlight-tab2" data-toggle="tab" class="legitRipple">SMA IPA</a></li>
 									<li><a href="#highlight-tab3" data-toggle="tab" class="legitRipple">SMA IPS</a></li>
+=======
+									<li><a href="#highlights-tab1" data-toggle="tab" class="legitRipple">SMP</a></li>
+									<li><a href="#highlights-tab2" data-toggle="tab" class="legitRipple">SMA</a></li>
+>>>>>>> 352e39036ea647eae6a56a79900ca9cc64e73e21
 								</ul>
 
 								<div class="tab-content">
@@ -165,6 +170,7 @@
 
 											<a href="{{base_url('main/smp/ipa')}}"><button type="submit" class="btn btn-primary legitRipple">IPA <i class="icon-arrow-right14 position-right"></i></button></a>
 									</div>
+<<<<<<< HEAD
 									<div class="tab-pane" id="highlight-tab2">
 										<div class="row">
 											<div class="col-md-12">
@@ -195,8 +201,10 @@
 											<a href="{{base_url()}}"><button type="submit" class="btn btn-primary legitRipple">SEJARAH <i class="icon-arrow-right14 position-right"></i></button></a>
 
 											<a href="{{base_url()}}"><button type="submit" class="btn btn-primary legitRipple">SOSIOLIGI <i class="icon-arrow-right14 position-right"></i></button></a>
+=======
 									<div class="tab-pane" id="highlights-tab2">
 											<a href="{{base_url()}}"><button type="submit" class="btn btn-primary legitRipple">IPA <i class="icon-arrow-right14 position-right"></i></button></a>
+>>>>>>> 352e39036ea647eae6a56a79900ca9cc64e73e21
 
 											<a href="{{base_url()}}main/sma_ips/geografi"><button type="submit" class="btn btn-primary legitRipple">GEOGRAFI <i class="icon-arrow-right14 position-right"></i></button></a>
 												
