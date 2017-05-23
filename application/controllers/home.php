@@ -79,4 +79,8 @@ class home extends CI_Controller {
     function ice() {
     	echo $this->blade->nggambar('ice_smp');
     }
+
+    function tips() {
+        echo $this->blade->nggambar('tips');
+    }
 }

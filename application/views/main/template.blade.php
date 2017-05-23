@@ -10,6 +10,7 @@
 	<link rel="shortcut icon" type="image/png" href="{{base_url()}}assets/images/website/config/icon/{{$config->icon}}"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
 	<link href="{{base_url()}}assets/main/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="{{base_url('')}}assets/css/common.css">
 	<link href="{{base_url()}}assets/main/css/bootstrap.css" rel="stylesheet" type="text/css">
 	<link href="{{base_url()}}assets/main/css/core.css" rel="stylesheet" type="text/css">
 	<link href="{{base_url()}}assets/main/css/components.css" rel="stylesheet" type="text/css">
@@ -54,7 +55,9 @@
     		/* filter: alpha(opacity=50); */
 			/* width: 100%;
 			height: 100%; */
-			 
+		}
+		p, h4 {
+			text-align: justify;
 		}
 	</style>
 </head>
