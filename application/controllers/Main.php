@@ -64,7 +64,14 @@ class Main extends CI_Controller {
 				'mapel.id_mapel' => $id
 			);
 			$data['mapel']   = $this->m_mapel->detail($where,'mapel')->row();
-			$data['soal']   = $this->m_soal->soal_mulai($where,'soal')->result();
+			
+			if ($this->session->userdata('authmember_status')=='basic') {
+				$jumlah=$data['config']->basic;
+			}else{
+				$jumlah=$data['mapel']->jumlah_soal;
+			}
+			
+			$data['soal']   = $this->m_soal->soal_mulai($where,'soal',$jumlah)->result();
 			echo $this->blade->nggambar('main.prediksi.start',$data);	
 		
 		}else if ($url=="jawab") {
@@ -108,7 +115,14 @@ class Main extends CI_Controller {
 				'mapel.id_mapel' => $id
 			);
 			$data['mapel']   = $this->m_mapel->detail($where,'mapel')->row();
-			$data['soal']   = $this->m_soal->soal_mulai($where,'soal')->result();
+
+			if ($this->session->userdata('authmember_status')=='basic') {
+				$jumlah=$data['config']->basic;
+			}else{
+				$jumlah=$data['mapel']->jumlah_soal;
+			}
+
+			$data['soal']   = $this->m_soal->soal_mulai($where,'soal',$jumlah)->result();
 			echo $this->blade->nggambar('main.tryout.start',$data);	
 		
 		}else if ($url=="jawab") {

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2017-05-21 21:34:41
+Date: 2017-05-23 11:14:32
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -61,8 +61,11 @@ CREATE TABLE `config` (
   `address` longtext,
   `description` longtext,
   `icon` longtext,
+  `instagram` varchar(255) DEFAULT NULL,
+  `facebook` varchar(255) DEFAULT NULL,
   `logo` longtext,
   `meta_deskripsi` text NOT NULL,
+  `basic` int(11) DEFAULT NULL,
   `meta_keyword` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
@@ -70,7 +73,7 @@ CREATE TABLE `config` (
 -- ----------------------------
 -- Records of config
 -- ----------------------------
-INSERT INTO `config` VALUES ('1', 'NexApp', 'info@cakcode.co.id', '+6231 5630872', 'Universitas 17 Agustus 1945 Surabaya', '<p><b><i>Web Development and Design</i></b></p>', 'Untitled-11.png', 'Untitled-1_(1).png', '																																																																																																																																																																																																																								Web Development and Design sdsd\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											', '																																																																																																																																																																																																																								Web Development and Design dssd\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											');
+INSERT INTO `config` VALUES ('1', 'NexApp', 'info@cakcode.co.id', '087', 'Universitas 17 Agustus 1945 Surabaya', '<p><span class=\"wysiwyg-color-red\">Kami ingin pendidikan</span> terbaik dapat di akses siapa saja. Dapatkan akses penuh NexApp ke ratusan jam video pembelajaran dan ribuan soal-soal latihan dengan harga terjangkau!</p>', 'Untitled-11.png', 'nexapp_id', 'NexApp', 'Untitled-1_(1).png', '																																																																																																																																																																																																																																																																																				Web Development and Design sdsd\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											', '5', '																																																																																																																																																																																																																																																																																				Web Development and Design dssd\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											\r\n											');
 
 -- ----------------------------
 -- Table structure for jenjang
@@ -85,7 +88,6 @@ CREATE TABLE `jenjang` (
 -- ----------------------------
 -- Records of jenjang
 -- ----------------------------
-INSERT INTO `jenjang` VALUES ('1', 'SD');
 INSERT INTO `jenjang` VALUES ('2', 'SMP');
 INSERT INTO `jenjang` VALUES ('3', 'SMA');
 
@@ -100,13 +102,19 @@ CREATE TABLE `mapel` (
   `waktu` int(11) DEFAULT NULL,
   `jumlah_soal` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_mapel`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of mapel
 -- ----------------------------
-INSERT INTO `mapel` VALUES ('6', 'Bahasa Indonesia', ' 2', '120', '50');
+INSERT INTO `mapel` VALUES ('6', 'Bahasa Indonesia', '2', '121', '51');
 INSERT INTO `mapel` VALUES ('8', 'Matematika', '3', '120', '40');
+INSERT INTO `mapel` VALUES ('9', 'Bahasa Indonesia', '3', '120', '50');
+INSERT INTO `mapel` VALUES ('10', 'Matematika', '2', '120', '40');
+INSERT INTO `mapel` VALUES ('11', 'Bahasa Inggris', '2', '120', '50');
+INSERT INTO `mapel` VALUES ('12', 'Bahasa Inggris', '3', '120', '50');
+INSERT INTO `mapel` VALUES ('13', 'IPA', '2', '120', '50');
+INSERT INTO `mapel` VALUES ('14', 'IPA', '3', '120', '50');
 
 -- ----------------------------
 -- Table structure for materi
@@ -149,7 +157,7 @@ CREATE TABLE `member` (
 -- Records of member
 -- ----------------------------
 INSERT INTO `member` VALUES ('2039', 'ikko', 'ikko@yuhu.com', '08', 'Pria', '123', '123', '2017-05-21 20:25:45', '', 'basic', '0', '0');
-INSERT INTO `member` VALUES ('2068', 'asdasd', 'cakcode@gmail.com', '234234', 'Pria', '1f82ea75c5cc526729e2d581aeb3aeccfef4407e', 'asdas', '2017-05-21 16:05:39', '::1', 'premium', '1', '0');
+INSERT INTO `member` VALUES ('2068', 'asdasd', 'cakcode@gmail.com', '234234', 'Pria', '1f82ea75c5cc526729e2d581aeb3aeccfef4407e', 'asdas', '2017-05-23 06:02:18', '::1', 'basic', '1', '0');
 INSERT INTO `member` VALUES ('2074', 'asdasdasd', 'ikkosatrio0@gmail.com', '0657567', 'Pria', '1f82ea75c5cc526729e2d581aeb3aeccfef4407e', 'asdas', '2017-05-21 15:58:30', '::1', 'basic', '0', '0');
 INSERT INTO `member` VALUES ('2075', 'elka', 'elkaajib@gmail.com', '123123', 'Pria', 'e2d2fdf4f948f1f647b4cde92361996e0f9dad55', 'asek joss', '2017-05-21 16:00:05', '::1', 'basic', '0', '0');
 

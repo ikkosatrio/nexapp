@@ -135,12 +135,17 @@ Tidak hanya dibimbing oleh tutor-tutor terbaik, NexApp juga memiliki materi leng
 	  </div>
       <div class="col-md-6 ab-w3-agile-info">
 	   <div class="ab-w3-agile-info-text">
-	   <p class="sub-text one">Who We Are</p>
-	     <h2 class="title-w3">About Us</h2>
+	   <p class="sub-text one">Siapa Kami</p>
+	     <h2 class="title-w3">Tentang Kami</h2>
 		 
-		 <p>Lorem ipsum dolor sit amet, consectetur adipisc elit. Proin ultricies vestibulum velit.Lorem ipsum dolor sit amet.when an unknown printer took a galley of type and scrambled it to make a type specimen book.Proin ultricies vestibulum velit.Lorem ipsum dolor sit amet.when an unknown printer took  Proin ultricies vestibulum velit.Lorem ipsum dolor sit amet</p>
-			<div class="agileits_w3layouts_more menu__item one">
-				<a href="#" class="menu__link" data-toggle="modal" data-target="#myModal">Learn More</a>
+		 {!!$config->description!!}
+			<div class="agileits_w3layouts_more menu__item one custom">
+				<ul style="font-size: 1.5em; list-style-type: none;">
+				    <li><a href="https://www.facebook.com/{{$config->facebook}}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>{{$config->facebook}}</li></a>
+				    <li><a href="https://www.instagram.com/{{$config->instagram}}" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i>{{$config->instagram}}</li></a>
+				    <li><a href="mailto:{{$config->email}}"><i class="fa fa-envelope-o" aria-hidden="true"></i>{{$config->email}}</li></a>
+				    <li><a href="tel:{{$config->phone}}"><i class="fa fa-mobile" aria-hidden="true"></i>{{$config->phone}}</li></a>
+				</ul>
 			</div>
 		  </div>
 		  <div class="ab-w3-agile-inner">
@@ -167,10 +172,12 @@ Tidak hanya dibimbing oleh tutor-tutor terbaik, NexApp juga memiliki materi leng
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<div class="row">
+							<div class="col-md-12">	
 							<form id="form-login" action="{{base_url('authentication/go/member')}}">
 								<div class="panel panel-body login-form">
 									<div class="text-center">
-										<img class="img-responsive mar-center" style="max-width:100px;height:100px;display:block;margin-left:auto;margin-right:auto;" src="http://localhost/nexapp/assets/images/website/config/icon/cak1.png">
+										<img class="img-responsive mar-center" style="max-width:100px;height:100px;display:block;margin-left:auto;margin-right:auto;" src="{{base_url()}}assets/images/website/config/icon/{{$config->icon}}">
 										<h5 class="content-group">Login to your account <small class="display-block">NexApp</small></h5>
 									</div>
 
@@ -195,6 +202,8 @@ Tidak hanya dibimbing oleh tutor-tutor terbaik, NexApp juga memiliki materi leng
 									
 								</div>
 							</form>
+							</div>
+							</div>
 						</div>
 					</div>
 				</div>

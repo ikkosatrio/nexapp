@@ -46,7 +46,7 @@
 								</div>
 								<div class="form-group">
 									<label class="control-label col-lg-3">Jumlah Soal</label>
-									<label class="control-label col-lg-9">{{$mapel->jumlah_soal}}</label>
+									<label class="control-label col-lg-9">{{ ($ctrl->session->userdata('authmember_status')=='basic') ? $config->basic : $mapel->jumlah_soal }} ({{$ctrl->session->userdata('authmember_status')}})</label>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-lg-3">Waktu</label>

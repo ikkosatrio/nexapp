@@ -307,7 +307,7 @@
 														<div class="tab-pane" id="highlighted-tab{{$result->id_jenjang}}">
 															@foreach ($mapel as $resultM)
 																@if ($result->id_jenjang==$resultM->id_jenjang)
-																<a href="{{base_url('main/tryout/'.$resultM->id_mapel)}}"><button type="submit" class="btn btn-primary legitRipple">{{$resultM->nm_mapel}} <i class="icon-arrow-right14 position-right"></i></button></a>
+																<a href="{{base_url('main/tryout/'.$resultM->id_mapel)}}"><button type="submit" style="margin-top: 15px" class="btn btn-primary legitRipple">{{$resultM->nm_mapel}} <i class="icon-arrow-right14 position-right"></i></button></a>
 																@endif
 															@endforeach
 														</div>
@@ -338,7 +338,7 @@
 														<div class="tab-pane" id="highlight-tab{{$result->id_jenjang}}">
 															@foreach ($mapel as $resultM)
 																@if ($result->id_jenjang==$resultM->id_jenjang)
-																<a href="{{base_url('main/prediksi/'.$resultM->id_mapel)}}"><button type="submit" class="btn btn-primary legitRipple">{{$resultM->nm_mapel}} <i class="icon-arrow-right14 position-right"></i></button></a>
+																<a href="{{base_url('main/prediksi/'.$resultM->id_mapel)}}"><button type="submit" style="margin-top: 15px" class="btn btn-primary legitRipple">{{$resultM->nm_mapel}} <i class="icon-arrow-right14 position-right"></i></button></a>
 																@endif
 															@endforeach
 														</div>

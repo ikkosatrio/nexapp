@@ -69,6 +69,18 @@ Dashboard - Administrasi
 										</select>
 										</div>
 									</div>
+									<div class="form-group">
+										<label class="control-label col-lg-2">Jumlah Soal</label>
+										<div class="col-lg-10">
+											<input type="number" class="form-control" name="jumlah_soal" value="{{ ($type=='create') ? '' : $mapel->jumlah_soal }}" required>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-lg-2">Waktu Pengerjaan</label>
+										<div class="col-lg-10">
+											<input type="number" class="form-control" placeholder="satuan menit" name="waktu" value="{{ ($type=='create') ? '' : $mapel->waktu }}" required>
+										</div>
+									</div>
 								</fieldset>
 								<div class="text-right">
 									<button type="submit" class="btn btn-primary">{{ ($type=='create') ? 'Simpan' : 'Edit' }} <i class="icon-arrow-right14 position-right"></i></button>

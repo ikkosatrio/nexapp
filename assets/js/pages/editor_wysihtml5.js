@@ -11,7 +11,7 @@
 
 $(function() {
 
-    // Default initialization
+    // // Default initialization
     $('.wysihtml5-default').wysihtml5({
         parserRules:  wysihtml5ParserRules,
         stylesheets: ["assets/css/components.css"]

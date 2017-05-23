@@ -69,6 +69,20 @@
 									</div>
 
 									<div class="form-group">
+										<label class="control-label col-lg-2">Facebook</label>
+										<div class="col-lg-10">
+											<input type="text" class="form-control" name="facebook" value="{{$config->facebook}}">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-lg-2">Instagram</label>
+										<div class="col-lg-10">
+											<input type="text" class="form-control" name="instagram" value="{{$config->instagram}}">
+										</div>
+									</div>
+
+									<div class="form-group">
 										<label class="control-label col-lg-2">E-Mail</label>
 										<div class="col-lg-10">
 											<input type="text" class="form-control" name="email" value="{{$config->email}}">

@@ -150,12 +150,12 @@
 							<div class="tabbable">
 								<ul class="nav nav-tabs nav-tabs-highlight">
 								
-									<li><a href="#highlight-tab1" data-toggle="tab" class="legitRipple">SMP</a></li>
-									<li><a href="#highlight-tab2" data-toggle="tab" class="legitRipple">SMA</a></li>
+									<li><a href="#highlights-tab1" data-toggle="tab" class="legitRipple">SMP</a></li>
+									<li><a href="#highlights-tab2" data-toggle="tab" class="legitRipple">SMA</a></li>
 								</ul>
 
 								<div class="tab-content">
-									<div class="tab-pane" id="highlight-tab1">
+									<div class="tab-pane" id="highlights-tab1">
 											<a href="{{base_url('main/smp/bindo')}}"><button type="submit" class="btn btn-primary legitRipple">BAHASA <i class="icon-arrow-right14 position-right"></i></button></a>
 
 											<a href="{{base_url('main/smp/matematika')}}"><button type="submit" class="btn btn-primary legitRipple">MATEMATIKA <i class="icon-arrow-right14 position-right"></i></button></a>
@@ -164,7 +164,7 @@
 
 											<a href="{{base_url('main/smp/ipa')}}"><button type="submit" class="btn btn-primary legitRipple">IPA <i class="icon-arrow-right14 position-right"></i></button></a>
 									</div>
-									<div class="tab-pane" id="highlight-tab2">
+									<div class="tab-pane" id="highlights-tab2">
 											<a href="{{base_url()}}"><button type="submit" class="btn btn-primary legitRipple">IPA <i class="icon-arrow-right14 position-right"></i></button></a>
 
 											<a href="{{base_url()}}"><button type="submit" class="btn btn-primary legitRipple">IPS <i class="icon-arrow-right14 position-right"></i></button></a>

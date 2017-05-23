@@ -486,6 +486,15 @@ p.sub-text.one {
     left: 105%;
     top: 46%;
 }
+.agileits_w3layouts_more.menu__item.one.custom a:before,.agileits_w3layouts_more.menu__item.one.custom a:after {
+    content: '';
+    background: none;
+    width: 85%;
+    height: 2px;
+    position: absolute;
+    left: 105%;
+    top: 46%;
+}
 .ab-w3-agile-part h4 {
     font-size: 1.5em;
     color: #fff;
