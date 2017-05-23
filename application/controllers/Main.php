@@ -251,6 +251,12 @@ class Main extends CI_Controller {
     	echo $this->blade->nggambar('tips',$data);	
     }
 
+    function about() {
+    	$data = $this->data;
+        $data['halaman'] = "about";
+    	echo $this->blade->nggambar('about',$data);	
+    }
+
 }
 
 /* End of file Main.php */
