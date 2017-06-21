@@ -156,7 +156,7 @@
 								</ul>
 
 								<div class="tab-content">
-									<div class="tab-pane" id="highlights-tab1">
+									<div class="tab-pane" id="highlight-tab1">
 											<a href="{{base_url('main/smp/bindo')}}"><button type="submit" class="btn btn-primary legitRipple">BAHASA <i class="icon-arrow-right14 position-right"></i></button></a>
 
 											<a href="{{base_url('main/smp/matematika')}}"><button type="submit" class="btn btn-primary legitRipple">MATEMATIKA <i class="icon-arrow-right14 position-right"></i></button></a>

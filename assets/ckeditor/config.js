@@ -54,7 +54,7 @@ CKEDITOR.editorConfig = function( config ) {
 	// ------------------------------
 
 	// CKEDITOR PLUGINS LOADING
-    config.extraPlugins = 'pbckcode'; // add other plugins here (comma separated)
+    config.extraPlugins = 'pbckcode,html5audio,widget,lineutils,clipboard,notification,toolbar,button,widgetselection'; // add other plugins here (comma separated)
 
 	// PBCKCODE CUSTOMIZATION
     config.pbckcode = {

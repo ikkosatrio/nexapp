@@ -54,7 +54,7 @@ Dashboard - Administrasi
 							@foreach ($soal as $key => $result)
 								<tr>
 									<td>{{($key+1)}}</td>
-									<td><a href="{{base_url('superuser/soal/update/'.$result->id_soal)}}">{{$result->isi_soal}}...</a></td>
+									<td><a href="{{base_url('superuser/soal/update/'.$result->id_bab.'/'.$result->id_soal)}}">{{ucwords(read_more($result->isi_soal,100))}}...</a></td>
 									<td>{{$result->nm_bab}}</td>
 									<td>{{$result->nm_mapel}} - {{$result->nm_jenjang}}</td>
 									<td class="text-center">

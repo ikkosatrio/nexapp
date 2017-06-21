@@ -88,7 +88,7 @@
 
 					<ul class="dropdown-menu dropdown-menu-right">
 						<li class="divider"></li>
-						<li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
+						<li><a href="{{base_url('main/riwayat')}}"><i class="icon-cog5"></i> Riwayat</a></li>
 						<li><a href="{{base_url('authentication/logout')}}"><i class="icon-switch2"></i> Logout</a></li>
 					</ul>
 				</li>
@@ -107,7 +107,7 @@
 		<div class="navbar-collapse collapse" id="navbar-second-toggle">
 			<ul class="nav navbar-nav navbar-nav-material">
 				<li><a href="{{base_url('main')}}"><i class="icon-home position-left"></i> Home</a></li>
-				<li class="dropdown">
+				{{-- <li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						<i class="icon-make-group position-left"></i> Materi <span class="caret"></span>
 					</a>
@@ -211,9 +211,9 @@
 							</ul>
 						</li>
 					</ul>
-				</li>
+				</li> --}}
 
-				<li class="dropdown">
+				{{-- <li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						<i class="icon-strategy position-left"></i> Starter kit <span class="caret"></span>
 					</a>
@@ -250,7 +250,7 @@
 						<li><a href="starters/layout_boxed.html"><i class="icon-align-center-horizontal"></i> Fixed width</a></li>
 						<li><a href="starters/layout_sidebar_sticky.html"><i class="icon-flip-vertical3"></i> Sticky sidebar</a></li>
 					</ul>
-				</li>
+				</li> --}}
 			</ul>
 		</div>
 	</div>
@@ -333,13 +333,13 @@
 												<div class="tabbable">
 													<ul class="nav nav-tabs nav-tabs-highlight">
 													@foreach ($jenjang as $result)
-														<li><a href="#highlight-tab{{$result->id_jenjang}}" data-toggle="tab" class="legitRipple">{{$result->nm_jenjang}}</a></li>
+														<li><a href="#highlights-tab{{$result->id_jenjang}}" data-toggle="tab" class="legitRipple">{{$result->nm_jenjang}}</a></li>
 													@endforeach
 													</ul>
 
 													<div class="tab-content">
 														@foreach ($jenjang as $result)
-														<div class="tab-pane" id="highlight-tab{{$result->id_jenjang}}">
+														<div class="tab-pane" id="highlights-tab{{$result->id_jenjang}}">
 															@foreach ($mapel as $resultM)
 																@if ($result->id_jenjang==$resultM->id_jenjang)
 																<a href="{{base_url('main/prediksi/'.$resultM->id_mapel)}}"><button type="submit" style="margin-top: 15px" class="btn btn-primary legitRipple">{{$resultM->nm_mapel}} <i class="icon-arrow-right14 position-right"></i></button></a>

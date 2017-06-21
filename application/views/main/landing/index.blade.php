@@ -12,8 +12,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link rel="shortcut icon" type="image/png" href="{{base_url()}}assets/images/website/config/icon/{{$config->icon}}"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Newcomer Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<meta name="keywords" content="Mencari materi belajar yang sesuai dan guru yang asik? Tidak hanya dibimbing oleh tutor-tutor terbaik, NexApp juga memiliki materi lengkap sesuai kurikulum sekolah untuk kelas 9, 10, 11, dan 12." />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Custom Theme files -->
 <link href="{{base_url()}}assets/landing/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">

@@ -312,13 +312,13 @@
 									<ul>
 										<li class="{{match($menu,'bab','active')}}"><a href="{{base_url('superuser/bab')}}">Bab & Materi</a></li>
 										<li class="{{match($menu,'soal','active')}}"><a href="{{base_url('superuser/soal')}}">Soal</a></li>
-										<li class="{{match($menu,'simulasi','active')}}">
+										{{-- <li class="{{match($menu,'simulasi','active')}}">
 											<a href="#">Simulasi</a>
 											<ul>
 												<li><a href="#">TryOut</a></li>
 												<li><a href="#">Prediksi</a></li>
 											</ul>
-										</li>
+										</li> --}}
 									</ul>
 								</li>
 								<li class="{{match($menu,'mapel','active')}}"><a href="{{base_url('superuser/mapel')}}"><i class="icon-pencil3"></i> <span>Mata Pelajaran</span></a></li>

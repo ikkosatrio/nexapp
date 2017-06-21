@@ -313,7 +313,6 @@ class Superuser extends CI_Controller {
 			$pilihC     = $this->input->post('pilihC');
 			$pilihD     = $this->input->post('pilihD');
 
-
 			$data = array(
 				'isi_soal'   => $soal,
 				'pilihA'     => $pilihA,
@@ -326,6 +325,9 @@ class Superuser extends CI_Controller {
 			);
 
 		if($id = $this->m_soal->input_data($data,'soal')){
+				if (!empty($_FILES['audio']['name'])) {
+					$upload 	= $this->upload('./assets/audio/',$id);
+				}
 				echo goResult(true,"Data Telah Di Tambahkan");
 				return;
 			}
@@ -355,17 +357,40 @@ class Superuser extends CI_Controller {
 			$pilihB     = $this->input->post('pilihB');
 			$pilihC     = $this->input->post('pilihC');
 			$pilihD     = $this->input->post('pilihD');
+			$pilihE     = $this->input->post('pilihE');
 
-
-			$data = array(
-				'isi_soal'   => $soal,
-				'pilihA'     => $pilihA,
-				'pilihB'     => $pilihB,
-				'pilihC'     => $pilihC,
-				'pilihD'     => $pilihD,
-				'jawaban'    => $jawaban,
-				'pembahasan' => $pembahasan
-			);
+			
+			if (empty($_FILES['audio']['name'])) {
+				$data = array(
+					'isi_soal'   => $soal,
+					'pilihA'     => $pilihA,
+					'pilihB'     => $pilihB,
+					'pilihC'     => $pilihC,
+					'pilihD'     => $pilihD,
+					'pilihE'     => $pilihE,
+					'jawaban'    => $jawaban,
+					'pembahasan' => $pembahasan,
+				);
+			}else{
+				$audio = time().$_FILES['audio']['name'];
+			
+				$upload 	= $this->upload('./assets/audio/','audio',$audio);
+				if($upload['auth']	== false){
+					echo goResult(false,$upload['msg']);
+					return;
+				}
+				$data = array(
+					'isi_soal'   => $soal,
+					'pilihA'     => $pilihA,
+					'pilihB'     => $pilihB,
+					'pilihC'     => $pilihC,
+					'pilihD'     => $pilihD,
+					'pilihE'     => $pilihE,
+					'jawaban'    => $jawaban,
+					'pembahasan' => $pembahasan,
+					'audio'		 => $audio
+				);
+			}
 		 
 			$where = array(
 				'id_soal' => $id
@@ -480,11 +505,12 @@ class Superuser extends CI_Controller {
 
 
 	//fungsi global
-	private function upload($dir,$name ='userfile'){
+	private function upload($dir,$name ='userfile',$filename=null){
 		$config['upload_path']      = $dir;
-        $config['allowed_types']    = 'gif|jpg|png';
-        $config['max_size']         = 2000;
+        $config['allowed_types']    = 'gif|jpg|png|mp3';
+        $config['max_size']         = 8000;
         $config['encrypt_name'] 	= FALSE;
+        $config['file_name'] 		= $filename;
 
         $this->load->library('upload', $config);
 

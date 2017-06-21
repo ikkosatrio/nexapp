@@ -17,6 +17,7 @@ class Main extends CI_Controller {
 		$this->load->model('m_config');
 		$this->load->model('m_materi');
 		$this->load->model('m_soal');
+		$this->load->model('m_riwayat');
 		$this->load->model('m_member');
 
 		$this->data['config'] 			= $this->m_config->ambil('config',1)->row();
@@ -29,6 +30,15 @@ class Main extends CI_Controller {
 		$data['mapel']   = $this->m_mapel->tampil_data('mapel')->result();
 		$data['jenjang'] = $this->m_jenjang->tampil_data('jenjang')->result();
 		echo $this->blade->nggambar('main.home',$data);
+	}
+
+	public function riwayat()
+	{
+		$data 		= $this->data;
+		$data['menu'] = "riwayat";
+		$where = array('id_member' => $this->session->userdata('authmember_id'));
+		$data['riwayat']   = $this->m_riwayat->detail($where,'riwayat')->result();
+		echo $this->blade->nggambar('main.riwayat.index',$data);
 	}
 
 	public function email($type){
@@ -77,11 +87,13 @@ class Main extends CI_Controller {
 		}else if ($url=="jawab") {
 			$data['soal']   = $this->m_soal->tampil_data('soal')->result();
 			$benar = 0;
+			$id_bab = "";
 			foreach ($data['soal'] as $key => $result) {
 				if ($this->input->post('pilih'.$result->id_soal.'[]')) {	
 						foreach ($this->input->post('pilih'.$result->id_soal.'[]') as $key => $value) {
 							if ($value==$result->jawaban) {
 								$benar = $benar + 1;
+								$id_bab = $result->id_bab;
 							}
 						}
 				}
@@ -92,6 +104,17 @@ class Main extends CI_Controller {
 						'benar' => $benar,
 						'nilai' => $nilai 
 					);
+
+			$where = array('id_bab' => $id_bab);
+			$bab = $this->m_bab->detail($where,'bab')->row();
+			$riwayat = array(
+				'id_member'   => $this->session->userdata('authmember_id'),
+				'id_mapel' => $bab->id_mapel,
+				'jenis' => 'prediksi',
+				'hasil' => $nilai, 
+			);
+			$this->m_riwayat->input_data($riwayat,'riwayat');
+
 			$data['no_soal'] = $this->input->post('no_soal');
 			echo $this->blade->nggambar('main.prediksi.hasil',$data);
 		}else{
@@ -128,21 +151,35 @@ class Main extends CI_Controller {
 		}else if ($url=="jawab") {
 			$data['soal']   = $this->m_soal->tampil_data('soal')->result();
 			$benar = 0;
+			$id_bab = "";
 			foreach ($data['soal'] as $key => $result) {
 				if ($this->input->post('pilih'.$result->id_soal.'[]')) {	
 					foreach ($this->input->post('pilih'.$result->id_soal.'[]') as $key => $value) {
 						if ($value==$result->jawaban) {
 							$benar = $benar + 1;
+							$id_bab = $result->id_bab;
 						}
 					}
 				}
 			}
+
+			
 			// var_dump($this->input->post('no_soal'));
 			$nilai = 2*$benar;
 			$data['jawab'] = array(
 						'benar' => $benar,
-						'nilai' => $nilai 
+						'nilai' => $nilai,
 					);
+			$where = array('id_bab' => $id_bab);
+			$bab = $this->m_bab->detail($where,'bab')->row();
+			$riwayat = array(
+				'id_member'   => $this->session->userdata('authmember_id'),
+				'id_mapel' => $bab->id_mapel,
+				'jenis' => 'tryout',
+				'hasil' => $nilai, 
+			);
+			$this->m_riwayat->input_data($riwayat,'riwayat');
+
 			$data['no_soal'] = $this->input->post('no_soal');
 			echo $this->blade->nggambar('main.tryout.hasil',$data);
 		}else{

@@ -15,11 +15,18 @@ Dashboard - Administrasi
 	<script type="text/javascript" src="{{base_url()}}assets/js/plugins/editors/wysihtml5/toolbar.js"></script>
 	<script type="text/javascript" src="{{base_url()}}assets/js/plugins/editors/wysihtml5/parsers.js"></script>
 	<script type="text/javascript" src="{{base_url()}}assets/js/plugins/editors/wysihtml5/locales/bootstrap-wysihtml5.ua-UA.js"></script>
-
+	{{-- <script type="text/javascript">
+	var editorsmall = false;
+	</script>
+	<script type="text/javascript" src="{{base_url()}}assets/ckeditor2/ckeditor.js"></script>
+	 --}}
+	<script type="text/javascript" src="{{base_url()}}assets/js/plugins/uploaders/fileinput.min.js"></script>
+	<script type="text/javascript" src="{{base_url()}}assets/js/pages/uploader_bootstrap.js"></script>
 	{{-- <script type="text/javascript" src="{{base_url()}}assets/js/plugins/forms/styling/switch.min.js"></script> --}}
 	<script type="text/javascript" src="{{base_url()}}assets/js/pages/editor_wysihtml5.js"></script>
 	{{-- <script type="text/javascript" src="{{base_url()}}assets/js/pages/form_checkboxes_radios.js"></script> --}}
 @endsection
+
 @section('content')
 	<div class="content-wrapper">
 
@@ -79,39 +86,63 @@ Dashboard - Administrasi
 										</div>
 									</div>
 									<div class="form-group">
-										{{-- <button type="button" class="btn btn-primary col-lg-2" onclick="NewMateri()"> Soal <i class="icon-pencil3 position-right"></i></button> --}}
+										<label class="col-lg-2 control-label text-semibold">File Audio:</label>
+										<div class="col-lg-10">
+											@if ($soal->audio!=null)
+											@php
+												$soal->audio = str_replace(' ', '_', $soal->audio);
+											@endphp
+												<audio src="{{base_url()}}assets/audio/{{$soal->audio}}" autobuffer autoloop loop controls></audio>
+											@endif
+											<input type="file" name="audio" class="file-input" data-show-upload="false">
+											<span class="help-block">Inputan ini dikhususkan untuk soal listening atau memiliki audio jika tidak ada audio silahkan hiraukan inputan ini.<code>pastikan format file .mp3</code></span>
+										</div>
 									</div>
 									<div class="form-group">
 										<label class="control-label col-lg-2">Soal</label>
 										<div class="col-lg-10">
-											<textarea rows="5" cols="5" name="isiSoal" class=" wysihtml5 wysihtml5-default form-control" placeholder="Isi Soal">{{ ($type=='create') ? '' : $soal->isi_soal }}</textarea>
+											<textarea rows="10" cols="100" name="isiSoal" class="wysihtml5 wysihtml5-default2 form-control" placeholder="Isi Soal">{{ ($type=='create') ? '' : $soal->isi_soal }}</textarea>
 										<div class="form-group">
 											<label class="text-semibold">Jawaban</label>
 											<div class="radio">
 												<label>
 													<input type="radio" name="jawaban" @if ($type=='update'){{ ($soal->jawaban=='A') ? 'checked' : '' }}@endif value="A">
-													<input type="text" class="form-control" name="pilihA" value="{{ ($type=='create') ? '' : $soal->pilihA }}" placeholder="A" required="">
+													{{-- <input type="text" class="form-control" name="pilihA" value="{{ ($type=='create') ? '' : $soal->pilihA }}" placeholder="A" required=""> --}}
+
+													A<textarea class=" wysihtml5 wysihtml5-default2 form-control form-control" placeholder="A" required="" name="pilihA">{{ ($type=='create') ? '' : $soal->pilihA }}</textarea>
 												</label>
 											</div>
 
 											<div class="radio">
 												<label>
 													<input type="radio" name="jawaban" @if ($type=='update'){{ ($soal->jawaban=='B') ? 'checked' : '' }}@endif value="B">
-													<input type="text" class="form-control" name="pilihB" value="{{ ($type=='create') ? '' : $soal->pilihB }}" placeholder="B" required="">
+													{{-- <input type="text" class="form-control" name="pilihB" value="{{ ($type=='create') ? '' : $soal->pilihB }}" placeholder="B" required=""> --}}
+
+													B<textarea class=" wysihtml5 wysihtml5-default2 form-control form-control" placeholder="B" required="" name="pilihB">{{ ($type=='create') ? '' : $soal->pilihB }}</textarea>
 												</label>
 											</div>
 
 											<div class="radio">
 												<label>
 													<input type="radio" name="jawaban" @if ($type=='update'){{ ($soal->jawaban=='C') ? 'checked' : '' }}@endif value="C">
-													<input type="text" class="form-control" name="pilihC" value="{{ ($type=='create') ? '' : $soal->pilihC }}" placeholder="C" required="">
+													{{-- <input type="text" class="form-control" name="pilihC" value="{{ ($type=='create') ? '' : $soal->pilihC }}" placeholder="C" required=""> --}}
+													C<textarea class=" wysihtml5 wysihtml5-default2 form-control form-control" placeholder="C" required="" name="pilihC">{{ ($type=='create') ? '' : $soal->pilihC }}</textarea>
 												</label>
 											</div>
 
 											<div class="radio">
 												<label>
 													<input type="radio" name="jawaban" @if ($type=='update'){{ ($soal->jawaban=='D') ? 'checked' : '' }}@endif value="D">
-													<input type="text" class="form-control" name="pilihD" value="{{ ($type=='create') ? '' : $soal->pilihD }}" placeholder="D" required="">
+													{{-- <input type="text" class="form-control" name="pilihD" value="{{ ($type=='create') ? '' : $soal->pilihD }}" placeholder="D" required=""> --}}
+													D<textarea class=" wysihtml5 wysihtml5-default2 form-control form-control" placeholder="D" required="" name="pilihD">{{ ($type=='create') ? '' : $soal->pilihD }}</textarea>
+												</label>
+											</div>
+
+											<div class="radio">
+												<label>
+													<input type="radio" name="jawaban" @if ($type=='update'){{ ($soal->jawaban=='E') ? 'checked' : '' }}@endif value="E">
+													{{-- <input type="text" class="form-control" name="pilihE" value="{{ ($type=='create') ? '' : $soal->pilihE }}" placeholder="E" required=""> --}}
+													E<textarea class=" wysihtml5 wysihtml5-default2 form-control form-control" placeholder="E" required="" name="pilihE">{{ ($type=='create') ? '' : $soal->pilihE }}</textarea>
 												</label>
 											</div>
 										</div>
@@ -144,6 +175,7 @@ Dashboard - Administrasi
 				</div>
 			</div>
 @section('script')
+	<script type="text/javascript" src="{{base_url()}}assets/js/pages/editor_ckeditor.js"></script>
 	<script type="text/javascript">
 	// function NewMateri(){
 		

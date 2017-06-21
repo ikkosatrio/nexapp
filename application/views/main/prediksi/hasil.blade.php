@@ -94,16 +94,25 @@
 									<div class="well">
 									    {!!$result->isi_soal!!}
 									</div>
+									@if ($result->audio!=null)
+									<div class="well">
+											@php
+												$result->audio = str_replace(' ', '_', $result->audio);
+											@endphp
+												<audio src="{{base_url()}}assets/audio/{{$result->audio}}" autobuffer autoloop loop controls></audio>
+									</div>
+										@endif
 								</div>
 							</div>
 							<br>
 							<div class="row">
 								<div class="col-lg-12">
 									<ul class="list list-unstyled no-margin-bottom">
-										<li><input type="radio" name="pilih{{$result->id_soal}}[]" value="A">{{$result->pilihA}}</li>
-										<li><input type="radio" name="pilih{{$result->id_soal}}[]" value="B">{{$result->pilihB}}</li>
-										<li><input type="radio" name="pilih{{$result->id_soal}}[]" value="C">{{$result->pilihC}}</li>
-										<li><input type="radio" name="pilih{{$result->id_soal}}[]" value="D">{{$result->pilihD}}</li>
+										<li class="panel">A.<input type="radio" name="pilih{{$result->id_soal}}[]" value="A">{!!$result->pilihA!!}</li>
+										<li class="panel">B.<input type="radio" name="pilih{{$result->id_soal}}[]" value="B">{!!$result->pilihB!!}</li>
+										<li class="panel">C.<input type="radio" name="pilih{{$result->id_soal}}[]" value="C">{!!$result->pilihC!!}</li>
+										<li class="panel">D.<input type="radio" name="pilih{{$result->id_soal}}[]" value="D">{!!$result->pilihD!!}</li>
+										<li class="panel">E.<input type="radio" name="pilih{{$result->id_soal}}[]" value="E">{!!$result->pilihE!!}</li>
 									</ul>
 								</div>
 							</div>
@@ -119,7 +128,7 @@
 								</div>
 							</div>	
 					<div class="divider">
-						<hr>
+						<hr style="border-top: 1px double #8c8b8b">
 					</div>
 					</div>
 					@php

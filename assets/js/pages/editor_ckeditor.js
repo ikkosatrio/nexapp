@@ -9,12 +9,15 @@
 *
 * ---------------------------------------------------------------------------- */
 
-$(function() {
+$(function() {  
 
     // Full featured editor
     CKEDITOR.replace( 'editor-full', {
-        height: '400px',
-        extraPlugins: 'forms'
+        height: ((editorsmall==true) ? '100px' : '200px' ),
+
+        extraPlugins: 'forms',
+
+        baseHref : "http://polres.dev/"
     });
 
 
